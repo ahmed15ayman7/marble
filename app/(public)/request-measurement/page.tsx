@@ -56,7 +56,7 @@ export default function RequestMeasurementPage() {
 
   if (submitted) {
     return (
-      <div className="pt-20 min-h-screen bg-stone-50 dark:bg-stone-900 flex items-center justify-center">
+      <div className="min-h-screen bg-stone-50 dark:bg-stone-900 flex items-center justify-center pt-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -80,7 +80,7 @@ export default function RequestMeasurementPage() {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       <PageHeader
         title="طلب قياس مجاني"
         subtitle="خدمة الزيارة الميدانية"

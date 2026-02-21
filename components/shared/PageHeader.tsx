@@ -31,8 +31,8 @@ export function PageHeader({ title, subtitle, description, className, center = t
         />
       </div>
 
-      {/* Content */}
-      <div className={cn("relative z-10 container mx-auto px-4", center && "text-center")}>
+      {/* Content — pt-20 to clear fixed navbar, then py padding */}
+      <div className={cn("relative z-10 container mx-auto px-4 pt-20", center && "text-center")}>
         {subtitle && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}

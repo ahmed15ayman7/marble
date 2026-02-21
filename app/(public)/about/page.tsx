@@ -32,7 +32,7 @@ const values = [
 
 export default function AboutPage() {
   return (
-    <div className="pt-20">
+    <div>
       <PageHeader
         title="من نحن"
         subtitle="قصتنا"

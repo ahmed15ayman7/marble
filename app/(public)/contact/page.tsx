@@ -76,7 +76,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="pt-20">
+    <div>
       <PageHeader
         title="اتصل بنا"
         subtitle="تواصل معنا"

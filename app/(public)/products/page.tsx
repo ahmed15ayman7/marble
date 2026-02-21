@@ -74,7 +74,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     : "";
 
   return (
-    <div className="pt-20">
+    <div>
       <PageHeader
         title={`${typeLabel} ${originLabel}`}
         subtitle="كتالوج المنتجات"

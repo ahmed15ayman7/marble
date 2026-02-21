@@ -94,7 +94,7 @@ const services = [
 
 export default function ServicesPage() {
   return (
-    <div className="pt-20">
+    <div>
       <PageHeader
         title="خدماتنا"
         subtitle="ماذا نقدم"
