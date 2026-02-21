@@ -256,7 +256,7 @@ export function Navbar() {
           )}
 
           {/* Measurement CTA */}
-          <Button asChild variant={isScrolled ? "gold" : "outline"} size="sm"
+          <Button asChild variant={"gold"} size="sm"
             className={cn(!isScrolled && "border-white/30 text-white hover:bg-white/10")}
           >
             <Link href="/request-measurement">طلب قياس</Link>
