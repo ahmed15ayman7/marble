@@ -118,10 +118,27 @@ export default function LoginPage() {
             </Button>
           </form>
 
-          <div className="mt-6 text-center">
+          {/* Register link */}
+          <div className="flex items-center gap-3 my-5">
+            <div className="flex-1 h-px bg-stone-200 dark:bg-stone-700" />
+            <span className="text-xs text-stone-400">أو</span>
+            <div className="flex-1 h-px bg-stone-200 dark:bg-stone-700" />
+          </div>
+
+          <p className="text-center text-sm text-stone-500 dark:text-stone-400">
+            ليس لديك حساب؟{" "}
+            <Link
+              href="/auth/register"
+              className="text-gold-600 font-semibold hover:text-gold-700 transition-colors"
+            >
+              إنشاء حساب جديد
+            </Link>
+          </p>
+
+          <div className="mt-4 text-center">
             <Link
               href="/"
-              className="text-sm text-stone-500 hover:text-gold-600 transition-colors"
+              className="text-sm text-stone-400 hover:text-gold-600 transition-colors"
             >
               ← العودة للموقع
             </Link>

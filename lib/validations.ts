@@ -5,11 +5,17 @@ export const loginSchema = z.object({
   password: z.string().min(6, "كلمة المرور يجب أن تكون 6 أحرف على الأقل"),
 });
 
-export const registerSchema = z.object({
-  name: z.string().min(2, "الاسم يجب أن يكون حرفين على الأقل"),
-  email: z.string().email("بريد إلكتروني غير صحيح"),
-  password: z.string().min(6, "كلمة المرور يجب أن تكون 6 أحرف على الأقل"),
-});
+export const registerSchema = z
+  .object({
+    name: z.string().min(2, "الاسم يجب أن يكون حرفين على الأقل"),
+    email: z.string().email("بريد إلكتروني غير صحيح"),
+    password: z.string().min(6, "كلمة المرور يجب أن تكون 6 أحرف على الأقل"),
+    confirmPassword: z.string().min(6, "تأكيد كلمة المرور مطلوب"),
+  })
+  .refine((data) => data.password === data.confirmPassword, {
+    message: "كلمتا المرور غير متطابقتان",
+    path: ["confirmPassword"],
+  });
 
 export const productSchema = z.object({
   name: z.string().min(2, "اسم المنتج مطلوب"),
