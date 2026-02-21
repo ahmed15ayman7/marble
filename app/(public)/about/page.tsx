@@ -37,7 +37,7 @@ export default function AboutPage() {
         title="من نحن"
         subtitle="قصتنا"
         description="شركة رائدة في مجال الرخام والجرانيت منذ أكثر من عقدين"
-        className="bg-stone-50 dark:bg-stone-900/50"
+        className=""
       />
 
       {/* Story */}

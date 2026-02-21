@@ -99,7 +99,7 @@ export default function ServicesPage() {
         title="خدماتنا"
         subtitle="ماذا نقدم"
         description="نوفر حلولاً متكاملة لجميع احتياجاتك من الرخام والجرانيت"
-        className="bg-stone-50 dark:bg-stone-900/50"
+        className=""
       />
 
       <section className="py-16 bg-white dark:bg-stone-900">

@@ -85,7 +85,7 @@ export default function RequestMeasurementPage() {
         title="طلب قياس مجاني"
         subtitle="خدمة الزيارة الميدانية"
         description="فريقنا المتخصص يزور موقعك ويقدم قياسات دقيقة واستشارة مجانية"
-        className="bg-stone-50 dark:bg-stone-900/50"
+        className=""
       />
 
       {/* Steps */}

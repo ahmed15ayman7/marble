@@ -79,7 +79,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         title={`${typeLabel} ${originLabel}`}
         subtitle="كتالوج المنتجات"
         description={`اكتشف تشكيلتنا الواسعة من ${typeLabel} ${originLabel} بأجود الخامات`}
-        className="bg-stone-50 dark:bg-stone-900/50"
+        className=""
       />
 
       <section className="py-12 bg-white dark:bg-stone-900">

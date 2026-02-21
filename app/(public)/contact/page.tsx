@@ -81,7 +81,7 @@ export default function ContactPage() {
         title="اتصل بنا"
         subtitle="تواصل معنا"
         description="نحن هنا للإجابة على جميع استفساراتك ومساعدتك في اختيار المنتج المناسب"
-        className="bg-stone-50 dark:bg-stone-900/50"
+        className=""
       />
 
       <section className="py-16 bg-white dark:bg-stone-900">
