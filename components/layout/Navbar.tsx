@@ -40,6 +40,11 @@ export function Navbar() {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+  useEffect(() => {
+    if(pathname!=="/") {
+      setIsOpen(true);
+    }
+  }, [pathname]);
 
   return (
     <header

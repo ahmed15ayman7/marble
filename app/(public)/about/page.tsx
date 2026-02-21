@@ -33,15 +33,12 @@ const values = [
 export default function AboutPage() {
   return (
     <div className="pt-20">
-      <div className="relative min-h-screen flex items-center overflow-hidden">
-
       <PageHeader
         title="من نحن"
         subtitle="قصتنا"
         description="شركة رائدة في مجال الرخام والجرانيت منذ أكثر من عقدين"
-        className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900"
-        />
-        </div>
+        className="bg-stone-50 dark:bg-stone-900/50"
+      />
 
       {/* Story */}
       <section className="py-16 bg-white dark:bg-stone-900">

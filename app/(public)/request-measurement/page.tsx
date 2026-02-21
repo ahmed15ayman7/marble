@@ -81,15 +81,12 @@ export default function RequestMeasurementPage() {
 
   return (
     <div className="pt-20">
-      <div className="relative min-h-screen flex items-center overflow-hidden">
-
       <PageHeader
         title="طلب قياس مجاني"
         subtitle="خدمة الزيارة الميدانية"
         description="فريقنا المتخصص يزور موقعك ويقدم قياسات دقيقة واستشارة مجانية"
-        className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900"
-        />
-        </div>
+        className="bg-stone-50 dark:bg-stone-900/50"
+      />
 
       {/* Steps */}
       <section className="py-12 bg-white dark:bg-stone-900 border-b border-stone-100 dark:border-stone-800">
