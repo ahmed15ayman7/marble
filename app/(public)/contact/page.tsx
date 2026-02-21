@@ -77,12 +77,14 @@ export default function ContactPage() {
 
   return (
     <div className="pt-20">
+      <div className="relative min-h-screen flex items-center overflow-hidden"> 
       <PageHeader
         title="اتصل بنا"
         subtitle="تواصل معنا"
         description="نحن هنا للإجابة على جميع استفساراتك ومساعدتك في اختيار المنتج المناسب"
-        className="bg-stone-50 dark:bg-stone-900/50"
-      />
+        className="absolute inset-0 bg-gradient-to-br from-stone-900 via-stone-800 to-stone-900"
+        />
+        </div>
 
       <section className="py-16 bg-white dark:bg-stone-900">
         <div className="container mx-auto px-4">
