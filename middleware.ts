@@ -7,27 +7,36 @@ const { auth } = NextAuth(authConfig);
 export default auth((req) => {
   const { pathname } = req.nextUrl;
   const isLoggedIn = !!req.auth;
-  const isAdmin = req.auth?.user?.role === "ADMIN";
+  const role = req.auth?.user?.role;
+  const isAdmin = role === "ADMIN";
 
-  const isAdminRoute = pathname.startsWith("/admin");
-  const isAuthRoute = pathname.startsWith("/auth");
+  const isAdminRoute     = pathname.startsWith("/admin");
+  const isClientRoute    = pathname.startsWith("/dashboard");
+  const isAuthRoute      = pathname.startsWith("/auth");
 
+  // ── حماية مسارات الأدمن ──────────────────────────────────────────────
   if (isAdminRoute) {
-    if (!isLoggedIn) {
-      return NextResponse.redirect(new URL("/auth/login", req.url));
-    }
-    if (!isAdmin) {
-      return NextResponse.redirect(new URL("/", req.url));
-    }
+    if (!isLoggedIn)
+      return NextResponse.redirect(new URL("/auth/login?callbackUrl=/admin", req.url));
+    if (!isAdmin)
+      return NextResponse.redirect(new URL("/dashboard", req.url));
   }
 
+  // ── حماية مسارات العميل ──────────────────────────────────────────────
+  if (isClientRoute) {
+    if (!isLoggedIn)
+      return NextResponse.redirect(new URL("/auth/login?callbackUrl=/dashboard", req.url));
+  }
+
+  // ── إعادة توجيه المستخدم المسجّل بالفعل من صفحات Auth ────────────────
   if (isAuthRoute && isLoggedIn) {
-    return NextResponse.redirect(new URL("/admin", req.url));
+    const dest = isAdmin ? "/admin" : "/dashboard";
+    return NextResponse.redirect(new URL(dest, req.url));
   }
 
   return NextResponse.next();
 });
 
 export const config = {
-  matcher: ["/admin/:path*", "/auth/:path*"],
+  matcher: ["/admin/:path*", "/dashboard/:path*", "/auth/:path*"],
 };

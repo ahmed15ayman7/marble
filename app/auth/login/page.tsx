@@ -40,7 +40,8 @@ export default function LoginPage() {
       }
 
       toast.success("تم تسجيل الدخول بنجاح");
-      router.push("/admin");
+      // /dashboard سيعمل redirect تلقائي للأدمن
+      router.push("/dashboard");
       router.refresh();
     } catch {
       toast.error("حدث خطأ، يرجى المحاولة مرة أخرى");
