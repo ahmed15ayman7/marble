@@ -9,9 +9,7 @@ generator client {
   provider = "prisma-client-js"
 }
 
-generator dbml {
-  provider = "prisma-dbml-generator"
-}
+
 enum Role {
   ADMIN
   USER

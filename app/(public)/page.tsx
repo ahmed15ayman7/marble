@@ -27,7 +27,7 @@ export default async function HomePage() {
       <HeroSection />
       <StatsSection />
       <ServicesSection />
-      <FeaturedProducts products={featuredProducts} />
+      {/* <FeaturedProducts products={featuredProducts} /> */}
 
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-br from-gold-600 to-gold-700 relative overflow-hidden">
