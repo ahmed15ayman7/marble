@@ -1,9 +1,11 @@
 import { NextRequest, NextResponse } from "next/server";
+import { auth } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { contactSchema } from "@/lib/validations";
 
 export async function POST(request: NextRequest) {
   try {
+    const session = await auth();
     const body = await request.json();
     const parsed = contactSchema.safeParse(body);
 
@@ -15,7 +17,10 @@ export async function POST(request: NextRequest) {
     }
 
     const message = await prisma.contactMessage.create({
-      data: parsed.data,
+      data: {
+        ...parsed.data,
+        userId: session?.user?.role === "CUSTOMER" ? session.user.id : null,
+      },
     });
 
     return NextResponse.json(

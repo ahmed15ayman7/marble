@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { prisma } from "@/lib/prisma";
 import { auth } from "@/lib/auth";
-import { Package, Tags, MessageSquare, Ruler, TrendingUp, Clock } from "lucide-react";
+import { Package, Tags, MessageSquare, Ruler, Clock, Building2 } from "lucide-react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { formatDate, getStatusLabel, getStatusColor } from "@/lib/utils";
@@ -16,6 +16,9 @@ async function getDashboardStats() {
     unreadMessages,
     measurementRequests,
     serviceRequests,
+    suppliersCount,
+    supplierProductsCount,
+    pendingSuppliers,
     recentMessages,
     recentMeasurements,
   ] = await Promise.all([
@@ -25,6 +28,9 @@ async function getDashboardStats() {
     prisma.contactMessage.count({ where: { isRead: false } }),
     prisma.measurementRequest.count(),
     prisma.serviceRequest.count(),
+    prisma.supplierProfile.count(),
+    prisma.supplierProduct.count(),
+    prisma.supplierProfile.count({ where: { isApproved: false } }),
     prisma.contactMessage.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
     prisma.measurementRequest.findMany({ orderBy: { createdAt: "desc" }, take: 5 }),
   ]);
@@ -36,6 +42,9 @@ async function getDashboardStats() {
     unreadMessages,
     measurementRequests,
     serviceRequests,
+    suppliersCount,
+    supplierProductsCount,
+    pendingSuppliers,
     recentMessages,
     recentMeasurements,
   };
@@ -47,18 +56,26 @@ export default async function AdminDashboard() {
 
   const statsCards = [
     {
-      title: "إجمالي المنتجات",
+      title: "منتجات الكتالوج",
       value: stats.productsCount,
       icon: Package,
       color: "text-blue-600",
       bg: "bg-blue-50 dark:bg-blue-900/10",
     },
     {
-      title: "التصنيفات",
-      value: stats.categoriesCount,
-      icon: Tags,
+      title: "منتجات الموردين",
+      value: stats.supplierProductsCount,
+      icon: Package,
       color: "text-emerald-600",
       bg: "bg-emerald-50 dark:bg-emerald-900/10",
+    },
+    {
+      title: "الموردين",
+      value: stats.suppliersCount,
+      icon: Building2,
+      badge: stats.pendingSuppliers > 0 ? `${stats.pendingSuppliers} بانتظار الموافقة` : undefined,
+      color: "text-gold-600",
+      bg: "bg-gold-50 dark:bg-gold-900/10",
     },
     {
       title: "رسائل التواصل",
@@ -72,8 +89,8 @@ export default async function AdminDashboard() {
       title: "طلبات القياس",
       value: stats.measurementRequests,
       icon: Ruler,
-      color: "text-gold-600",
-      bg: "bg-gold-50 dark:bg-gold-900/10",
+      color: "text-amber-600",
+      bg: "bg-amber-50 dark:bg-amber-900/10",
     },
   ];
 
@@ -90,7 +107,7 @@ export default async function AdminDashboard() {
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
         {statsCards.map((card, i) => (
           <Card key={i} className="border-stone-100 dark:border-stone-800">
             <CardContent className="pt-6">

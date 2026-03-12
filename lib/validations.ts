@@ -9,6 +9,10 @@ export const registerSchema = z
   .object({
     name: z.string().min(2, "الاسم يجب أن يكون حرفين على الأقل"),
     email: z.string().email("بريد إلكتروني غير صحيح"),
+    phone: z.string().optional(),
+    role: z.enum(["CUSTOMER", "SUPPLIER"], {
+      required_error: "يرجى اختيار نوع الحساب",
+    }),
     password: z.string().min(6, "كلمة المرور يجب أن تكون 6 أحرف على الأقل"),
     confirmPassword: z.string().min(6, "تأكيد كلمة المرور مطلوب"),
   })
@@ -16,6 +20,36 @@ export const registerSchema = z
     message: "كلمتا المرور غير متطابقتان",
     path: ["confirmPassword"],
   });
+
+export const supplierProfileSchema = z.object({
+  companyName: z.string().min(2, "اسم الشركة مطلوب"),
+  address: z.string().optional(),
+  phone: z.string().optional(),
+  description: z.string().optional(),
+});
+
+export const supplierProductSchema = z.object({
+  name: z.string().min(2, "اسم المنتج مطلوب"),
+  slug: z.string().min(2, "الرابط المختصر مطلوب"),
+  description: z.string().optional(),
+  price: z.number().positive().optional(),
+  category: z.enum(["MARBLE", "GRANITE"]),
+  images: z.array(z.string()).optional().default([]),
+});
+
+export const feedbackSchema = z.object({
+  message: z.string().min(10, "الرسالة يجب أن تكون 10 أحرف على الأقل"),
+  rating: z.number().min(1).max(5, "التقييم من 1 إلى 5"),
+});
+
+export const sendOtpSchema = z.object({
+  email: z.string().email("بريد إلكتروني غير صحيح"),
+});
+
+export const verifyOtpSchema = z.object({
+  email: z.string().email(),
+  otp: z.string().length(6, "رمز التحقق 6 أرقام"),
+});
 
 export const productSchema = z.object({
   name: z.string().min(2, "اسم المنتج مطلوب"),
@@ -79,3 +113,6 @@ export type CategoryInput = z.infer<typeof categorySchema>;
 export type ContactInput = z.infer<typeof contactSchema>;
 export type ServiceRequestInput = z.infer<typeof serviceRequestSchema>;
 export type MeasurementRequestInput = z.infer<typeof measurementRequestSchema>;
+export type SupplierProfileInput = z.infer<typeof supplierProfileSchema>;
+export type SupplierProductInput = z.infer<typeof supplierProductSchema>;
+export type FeedbackInput = z.infer<typeof feedbackSchema>;

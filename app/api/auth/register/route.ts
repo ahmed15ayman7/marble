@@ -1,27 +1,21 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import bcrypt from "bcryptjs";
-import { z } from "zod";
-
-const schema = z.object({
-  name: z.string().min(2),
-  email: z.string().email(),
-  password: z.string().min(6),
-});
+import { registerSchema } from "@/lib/validations";
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    const parsed = schema.safeParse(body);
+    const parsed = registerSchema.safeParse(body);
 
     if (!parsed.success) {
       return NextResponse.json(
-        { error: "بيانات غير صحيحة" },
+        { error: "بيانات غير صحيحة", details: parsed.error.flatten() },
         { status: 400 }
       );
     }
 
-    const { name, email, password } = parsed.data;
+    const { name, email, phone, password, role } = parsed.data;
 
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
@@ -34,7 +28,13 @@ export async function POST(request: NextRequest) {
     const hashedPassword = await bcrypt.hash(password, 12);
 
     const user = await prisma.user.create({
-      data: { name, email, password: hashedPassword, role: "USER" },
+      data: {
+        name,
+        email,
+        phone: phone ?? null,
+        password: hashedPassword,
+        role,
+      },
       select: { id: true, name: true, email: true, role: true },
     });
 

@@ -24,8 +24,10 @@ const navLinks = [
       { href: "/products?type=MARBLE&origin=IMPORTED",  label: "الرخام المستورد" },
       { href: "/products?type=GRANITE&origin=EGYPTIAN", label: "الجرانيت المصري" },
       { href: "/products?type=GRANITE&origin=IMPORTED", label: "الجرانيت المستورد" },
+      { href: "/products/supplier", label: "منتجات الموردين" },
     ],
   },
+  { href: "/suppliers", label: "الموردين" },
   { href: "/contact", label: "اتصل بنا" },
 ];
 
@@ -60,8 +62,17 @@ export function Navbar() {
     return () => document.removeEventListener("mousedown", handler);
   }, []);
 
-  const isAdmin = session?.user?.role === "ADMIN";
-  const dashboardHref = isAdmin ? "/admin" : "/dashboard";
+  const role = session?.user?.role as string | undefined;
+  const dashboardHref =
+    role === "ADMIN"
+      ? "/admin"
+      : role === "SUPPLIER"
+      ? "/supplier/dashboard"
+      : role === "CUSTOMER"
+      ? "/customer/dashboard"
+      : "/dashboard";
+  const profileHref =
+    role === "CUSTOMER" ? "/customer/profile" : "/dashboard/profile";
 
   /* ── helpers ─────────────────────────────────────────────── */
   const linkBase = (href: string) =>
@@ -204,12 +215,12 @@ export function Navbar() {
                         className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700 transition-colors"
                       >
                         <LayoutDashboard className="w-4 h-4" />
-                        {isAdmin ? "لوحة الإدارة" : "لوحتي"}
+                        {role === "ADMIN" ? "لوحة الإدارة" : role === "SUPPLIER" ? "لوحة المورد" : "لوحتي"}
                       </Link>
 
-                      {!isAdmin && (
+                      {role !== "ADMIN" && (
                         <Link
-                          href="/dashboard/profile"
+                          href={profileHref}
                           onClick={() => setUserMenu(false)}
                           className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700 transition-colors"
                         >
@@ -328,7 +339,7 @@ export function Navbar() {
                     <Button asChild variant="outline" className="w-full justify-start gap-2">
                       <Link href={dashboardHref}>
                         <LayoutDashboard className="w-4 h-4" />
-                        {isAdmin ? "لوحة الإدارة" : "لوحتي"}
+                        {role === "ADMIN" ? "لوحة الإدارة" : role === "SUPPLIER" ? "لوحة المورد" : "لوحتي"}
                       </Link>
                     </Button>
                     <Button

@@ -11,8 +11,14 @@ generator client {
 
 
 enum Role {
+  CUSTOMER
+  SUPPLIER
   ADMIN
-  USER
+}
+
+enum ProductCategory {
+  MARBLE
+  GRANITE
 }
 
 enum ProductType {
@@ -36,13 +42,56 @@ model User {
   id                   String               @id @default(cuid())
   name                 String?
   email                String               @unique
+  phone                String?
   password             String
-  role                 Role                 @default(USER)
+  role                 Role                 @default(CUSTOMER)
+  isEmailVerified      Boolean              @default(false)
   createdAt            DateTime             @default(now())
   updatedAt            DateTime             @updatedAt
   serviceRequests      ServiceRequest[]
   measurementRequests  MeasurementRequest[]
   contactMessages      ContactMessage[]
+  supplierProfile      SupplierProfile?
+  feedback             Feedback[]
+}
+
+model SupplierProfile {
+  id          String            @id @default(cuid())
+  userId      String            @unique
+  user        User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  companyName String
+  address     String?
+  phone       String?
+  description String?
+  isApproved  Boolean           @default(false)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+  products    SupplierProduct[]
+}
+
+model SupplierProduct {
+  id          String          @id @default(cuid())
+  supplierId  String
+  supplier    SupplierProfile @relation(fields: [supplierId], references: [id], onDelete: Cascade)
+  name        String
+  slug        String
+  description String?
+  price       Float?
+  category    ProductCategory
+  images      String[]
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+
+  @@unique([supplierId, slug])
+}
+
+model Feedback {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  message   String
+  rating    Int
+  createdAt DateTime @default(now())
 }
 
 model Category {

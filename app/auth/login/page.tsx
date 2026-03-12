@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { signIn, getSession } from "next-auth/react";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { toast } from "sonner";
@@ -26,6 +26,22 @@ export default function LoginPage() {
     resolver: zodResolver(loginSchema),
   });
 
+  const searchParams = useSearchParams();
+  const callbackUrl = searchParams.get("callbackUrl") ?? "/";
+
+  const getRedirectPath = (role: string) => {
+    switch (role) {
+      case "ADMIN":
+        return "/admin";
+      case "SUPPLIER":
+        return "/supplier/dashboard";
+      case "CUSTOMER":
+        return "/customer/dashboard";
+      default:
+        return "/";
+    }
+  };
+
   const onSubmit = async (data: LoginInput) => {
     try {
       const result = await signIn("credentials", {
@@ -40,8 +56,10 @@ export default function LoginPage() {
       }
 
       toast.success("تم تسجيل الدخول بنجاح");
-      // /dashboard سيعمل redirect تلقائي للأدمن
-      router.push("/dashboard");
+      const session = await getSession();
+      const role = session?.user?.role as string | undefined;
+      const path = callbackUrl && callbackUrl !== "/" ? callbackUrl : getRedirectPath(role ?? "");
+      router.push(path);
       router.refresh();
     } catch {
       toast.error("حدث خطأ، يرجى المحاولة مرة أخرى");
