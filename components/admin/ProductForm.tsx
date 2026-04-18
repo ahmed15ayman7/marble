@@ -203,7 +203,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                 {errors.origin && <p className="text-red-500 text-xs mt-1">{errors.origin.message}</p>}
               </div>
 
-              <div>
+              {/* <div> */}
                 {/* <Label>التصنيف *</Label>
                 <Select
                   defaultValue={product?.categoryId}
