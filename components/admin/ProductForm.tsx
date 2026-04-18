@@ -18,7 +18,7 @@ import { productSchema, type ProductInput } from "@/lib/validations";
 import { slugify } from "@/lib/utils";
 
 interface ProductFormProps {
-  product?: Product & { category: Category };
+  product?: Product;
   categories: Category[];
 }
 
@@ -47,7 +47,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
           priceUnit: product.priceUnit ?? "م²",
           isFeatured: product.isFeatured,
           isAvailable: product.isAvailable,
-          categoryId: product.categoryId,
+          categoryId: product.categoryId ?? undefined,
           images: product.images,
         }
       : {
