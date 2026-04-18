@@ -204,7 +204,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
               </div>
 
               <div>
-                <Label>التصنيف *</Label>
+                {/* <Label>التصنيف *</Label>
                 <Select
                   defaultValue={product?.categoryId}
                   onValueChange={(v) => setValue("categoryId", v)}
@@ -221,7 +221,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   </SelectContent>
                 </Select>
                 {errors.categoryId && <p className="text-red-500 text-xs mt-1">{errors.categoryId.message}</p>}
-              </div>
+              </div> */}
             </CardContent>
           </Card>
 

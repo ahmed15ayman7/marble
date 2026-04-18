@@ -63,7 +63,7 @@ export const productSchema = z.object({
   priceUnit: z.string().optional(),
   isFeatured: z.boolean().default(false),
   isAvailable: z.boolean().default(true),
-  categoryId: z.string().min(1, "التصنيف مطلوب"),
+  categoryId: z.string().optional(),
   images: z.array(z.string()).optional(),
 });
 

@@ -121,8 +121,8 @@ model Product {
   priceUnit   String?       @default("م²")
   isFeatured  Boolean       @default(false)
   isAvailable Boolean       @default(true)
-  categoryId  String
-  category    Category      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
+  categoryId  String?
+  category    Category?      @relation(fields: [categoryId], references: [id], onDelete: Cascade)
   createdAt   DateTime      @default(now())
   updatedAt   DateTime      @updatedAt
 }
