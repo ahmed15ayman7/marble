@@ -141,7 +141,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 {product.nameAr}
               </h1>
               <p className="text-stone-500 dark:text-stone-400 text-sm mb-6">
-                {product.name} | التصنيف: {product.category.nameAr}
+                {product.name} | التصنيف: {product.category?.nameAr}
               </p>
 
               {product.price && (
@@ -167,7 +167,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 {[
                   { label: "النوع", value: getProductTypeLabel(product.type) },
                   { label: "المصدر", value: getOriginLabel(product.origin) },
-                  { label: "التصنيف", value: product.category.nameAr },
+                  { label: "التصنيف", value: product.category?.nameAr },
                   { label: "الوحدة", value: product.priceUnit ?? "م²" },
                 ].map((spec, i) => (
                   <div key={i} className="bg-stone-50 dark:bg-stone-800 rounded-xl p-3">

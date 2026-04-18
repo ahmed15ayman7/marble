@@ -80,7 +80,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
       {/* Content */}
       <div className="p-4">
         <div className="mb-1">
-          <p className="text-xs text-stone-400 dark:text-stone-500 mb-1">{product.category.nameAr}</p>
+          <p className="text-xs text-stone-400 dark:text-stone-500 mb-1">{product.category?.nameAr}</p>
           <h3 className="font-bold text-stone-900 dark:text-white text-base leading-tight">
             {product.nameAr}
           </h3>

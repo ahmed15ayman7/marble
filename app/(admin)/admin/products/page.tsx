@@ -72,7 +72,7 @@ export default async function AdminProductsPage() {
                       </div>
                     </td>
                     <td className="px-4 py-4">
-                      <p className="text-sm text-stone-700 dark:text-stone-300">{product.category.nameAr}</p>
+                      <p className="text-sm text-stone-700 dark:text-stone-300">{product.category?.nameAr}</p>
                     </td>
                     <td className="px-4 py-4">
                       {product.price ? (

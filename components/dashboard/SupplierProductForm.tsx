@@ -59,7 +59,7 @@ export function SupplierProductForm({
           slug: product.slug,
           description: product.description ?? "",
           price: product.price ?? undefined,
-          category: product.category,
+          category: product.category?? "MARBLE",
           images: product.images,
           imagesStr: product.images.join("\n"),
         }
