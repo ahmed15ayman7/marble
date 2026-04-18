@@ -39,7 +39,7 @@ export const supplierProductSchema = z.object({
 
 export const feedbackSchema = z.object({
   message: z.string().min(10, "الرسالة يجب أن تكون 10 أحرف على الأقل"),
-  rating: z.number().min(1).max(5, "التقييم من 1 إلى 5"),
+  rating: z.any(),
 });
 
 export const sendOtpSchema = z.object({
