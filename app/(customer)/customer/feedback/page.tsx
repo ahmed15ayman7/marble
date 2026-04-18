@@ -87,7 +87,7 @@ export default function CustomerFeedbackPage() {
             ))}
           </div>
           {errors.rating && (
-            <p className="text-red-500 text-xs mt-1">{errors.rating.message}</p>
+            <p className="text-red-500 text-xs mt-1">{errors.rating.message as string}</p>
           )}
         </div>
 
