@@ -15,13 +15,20 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const { name, email, phone, password, role } = parsed.data;
+    const { name, email, phone, password, confirmPassword, role } = parsed.data;
 
     const existing = await prisma.user.findUnique({ where: { email } });
     if (existing) {
       return NextResponse.json(
         { error: "البريد الإلكتروني مستخدم بالفعل" },
         { status: 409 }
+      );
+    }
+
+    if (password !== confirmPassword) {
+      return NextResponse.json(
+        { error: "كلمتا المرور غير متطابقتان" },
+        { status: 400 }
       );
     }
 

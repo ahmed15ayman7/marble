@@ -50,6 +50,7 @@ export default function RegisterPage() {
         phone: data.phone || undefined,
         role: data.role,
         password: data.password,
+        confirmPassword: data.confirmPassword,
       }),
     });
 
