@@ -8,7 +8,7 @@ import { Button } from "@/components/ui/button";
 import { formatDate, getStatusLabel, getStatusColor } from "@/lib/utils";
 import { Ruler, Wrench, MessageSquare, Phone, MapPin, Calendar, Mail, Plus } from "lucide-react";
 
-export const metadata: Metadata = { title: "طلباتي | نور الرخام" };
+export const metadata: Metadata = { title: "طلباتي | الوادي للرخام" };
 
 export default async function RequestsPage({
   searchParams,

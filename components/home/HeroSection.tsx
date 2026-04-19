@@ -9,30 +9,25 @@ import { Button } from "@/components/ui/button";
 
 const heroSlides = [
   {
-    src: "https://images.unsplash.com/photo-1615873968403-89e068629265?auto=format&fit=crop&w=1200&q=80",
-    alt: "Marble surface luxury texture",
-    title: "رخام فاخر",
+    src: "https://www.alwan1.com/black-marble-kitchen-floor/",
+    alt: "رخام مطابخ اسود يعتبر من اجود انواع الرخام المصري",
+    title: "رخام مطابخ اسود يعتبر من اجود انواع الرخام المصري",
   },
   {
-    src: "https://images.unsplash.com/photo-1600566753190-7f1ac6ef395b?auto=format&fit=crop&w=1200&q=80",
-    alt: "Dark granite kitchen countertop",
-    title: "جرانيت أسود لامع",
+    src: "https://gebalstone.com/wp-content/uploads/2022/11/%D8%B1%D8%AE%D8%A7%D9%85-%D8%AC%D9%84%D8%A7%D9%83%D8%B3%D9%8A.jpg",
+    alt: "رخام جلاكسي",
+    title: "رخام جلاكسي",
   },
   {
-    src: "https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?auto=format&fit=crop&w=1200&q=80",
-    alt: "Marble floor interior design",
-    title: "رخام كارارا",
+    src: "https://i0.wp.com/gebalstone.com/wp-content/uploads/2022/11/%D8%B1%D8%AE%D8%A7%D9%85-%D8%A7%D9%85%D8%A8%D8%B1%D8%A7%D8%AF%D9%88%D8%B1.jpg?w=300&ssl=1",
+    alt: "رخام امبادور",
+    title: "رخام امبادور",
   },
   {
-    src: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80",
-    alt: "Natural stone marble wall",
-    title: "حجر طبيعي",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=80",
-    alt: "Marble and stone materials",
-    title: "تشكيلة واسعة",
-  },
+    src: "https://gebalstone.com/wp-content/uploads/2022/11/%D8%B1%D8%AE%D8%A7%D9%85-%D8%A7%D8%B3%D9%88%D8%AF-%D9%87%D9%86%D8%AF%D9%8A-%D8%AF%D8%A8%D9%84-%D8%A8%D9%84%D8%A7%D9%83.jpg",
+    alt: "رخام اسود هندي دبل بلاك",
+    title: "رخام اسود هندي دبل بلاك",
+  }
 ];
 
 const SLIDE_MS = 5200;

@@ -15,7 +15,7 @@ export function Footer() {
                 <Diamond className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="font-bold text-white text-lg leading-none">نور الرخام</p>
+                <p className="font-bold text-white text-lg leading-none">الوادي للرخام</p>
                 <p className="text-gold-400 text-xs">والجرانيت</p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export function Footer() {
 
       <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p className="text-sm text-stone-500">
-          © {new Date().getFullYear()} نور الرخام والجرانيت. جميع الحقوق محفوظة.
+          © {new Date().getFullYear()} الوادي للرخام والجرانيت. جميع الحقوق محفوظة.
         </p>
         <div className="flex items-center gap-4 text-sm text-stone-500">
           <Link href="#" className="hover:text-gold-400 transition-colors">سياسة الخصوصية</Link>

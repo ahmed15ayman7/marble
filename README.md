@@ -1,4 +1,4 @@
-# 🪨 نور الرخام والجرانيت - Marble & Granite Exhibition Platform
+# 🪨 الوادي للرخام والجرانيت - Marble & Granite Exhibition Platform
 
 منصة متكاملة لعرض وبيع الرخام والجرانيت، مبنية بـ **Next.js 14 + TypeScript + Prisma + PostgreSQL + NextAuth**.
 

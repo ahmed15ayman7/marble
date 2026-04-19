@@ -112,7 +112,7 @@ export function Navbar() {
           <div className="flex flex-col">
             <span className={cn("font-bold text-lg leading-tight transition-colors",
               isScrolled ? "text-stone-100" : "text-white")}>
-              نور الرخام
+              الوادي للرخام
             </span>
             <span className={cn("text-xs transition-colors",
               isScrolled ? "text-gold-500" : "text-gold-300")}>
