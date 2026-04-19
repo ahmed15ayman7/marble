@@ -9,11 +9,6 @@ import { Button } from "@/components/ui/button";
 
 const heroSlides = [
   {
-    src: "https://www.alwan1.com/black-marble-kitchen-floor/",
-    alt: "رخام مطابخ اسود يعتبر من اجود انواع الرخام المصري",
-    title: "رخام مطابخ اسود يعتبر من اجود انواع الرخام المصري",
-  },
-  {
     src: "https://gebalstone.com/wp-content/uploads/2022/11/%D8%B1%D8%AE%D8%A7%D9%85-%D8%AC%D9%84%D8%A7%D9%83%D8%B3%D9%8A.jpg",
     alt: "رخام جلاكسي",
     title: "رخام جلاكسي",
