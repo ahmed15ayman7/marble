@@ -219,7 +219,7 @@ function HeroMarbleSlider() {
       </div>
 
       {/* Stats strip */}
-      <motion.ul
+      {/* <motion.ul
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.6, duration: 0.5 }}
@@ -243,7 +243,7 @@ function HeroMarbleSlider() {
             <span className="text-xs text-stone-400">{s.l}</span>
           </motion.li>
         ))}
-      </motion.ul>
+      </motion.ul> */}
     </motion.div>
   );
 }
