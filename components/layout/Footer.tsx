@@ -5,13 +5,13 @@ import { Separator } from "@/components/ui/separator";
 
 export function Footer() {
   return (
-    <footer className="bg-stone-900 text-stone-300">
+    <footer className="bg-stone-950 text-stone-300 border-t border-stone-900">
       <div className="container mx-auto px-4 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* About */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-gradient-to-br from-gold-500 to-gold-700 rounded-lg flex items-center justify-center">
+              <div className="w-10 h-10 bg-gradient-to-br from-gold-700 to-gold-700 rounded-lg flex items-center justify-center">
                 <Diamond className="w-6 h-6 text-white" />
               </div>
               <div>
@@ -52,7 +52,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-stone-400 hover:text-gold-400 transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1.5 h-1.5 bg-gold-500 rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-gold-700 rounded-full" />
                     {link.label}
                   </Link>
                 </li>
@@ -76,7 +76,7 @@ export function Footer() {
                     href={link.href}
                     className="text-sm text-stone-400 hover:text-gold-400 transition-colors flex items-center gap-2"
                   >
-                    <span className="w-1.5 h-1.5 bg-gold-500 rounded-full" />
+                    <span className="w-1.5 h-1.5 bg-gold-700 rounded-full" />
                     {link.label}
                   </Link>
                 </li>
@@ -89,18 +89,18 @@ export function Footer() {
             <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">تواصل معنا</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
+                <Phone className="w-4 h-4 text-gold-700 mt-0.5 shrink-0" />
                 <div>
                   <p className="text-sm text-stone-300" dir="ltr">+20 100 000 0000</p>
                   <p className="text-sm text-stone-300" dir="ltr">+20 110 000 0000</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
+                <Mail className="w-4 h-4 text-gold-700 mt-0.5 shrink-0" />
                 <p className="text-sm text-stone-300" dir="ltr">info@marble.com</p>
               </li>
               <li className="flex items-start gap-3">
-                <MapPin className="w-4 h-4 text-gold-500 mt-0.5 shrink-0" />
+                <MapPin className="w-4 h-4 text-gold-700 mt-0.5 shrink-0" />
                 <p className="text-sm text-stone-400">
                   شارع الصناعة، المنطقة الصناعية<br />
                   القاهرة، مصر

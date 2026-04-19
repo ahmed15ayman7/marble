@@ -73,10 +73,10 @@ export default function LoginPage() {
         animate={{ opacity: 1, y: 0 }}
         className="w-full max-w-md"
       >
-        <div className="bg-white dark:bg-stone-800 rounded-3xl shadow-2xl p-8">
+        <div className="bg-stone-900 rounded-3xl shadow-2xl p-8">
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
-            <div className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg mb-4">
+            <div className="w-16 h-16 bg-gradient-to-br from-gold-700 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg mb-4">
               <Diamond className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-stone-900 dark:text-white">

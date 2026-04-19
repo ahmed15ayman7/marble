@@ -39,7 +39,7 @@ export default async function AdminProductsPage() {
         <CardContent className="p-0">
           <div className="overflow-x-auto">
             <table className="w-full">
-              <thead className="bg-stone-50 dark:bg-stone-800/50">
+              <thead className="bg-stone-900/50">
                 <tr className="text-right">
                   <th className="px-4 py-3 text-xs font-medium text-stone-500 uppercase tracking-wider">المنتج</th>
                   <th className="px-4 py-3 text-xs font-medium text-stone-500 uppercase tracking-wider">النوع</th>

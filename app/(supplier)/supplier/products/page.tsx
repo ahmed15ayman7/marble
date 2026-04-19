@@ -68,7 +68,7 @@ export default function SupplierProductsPage() {
         </Button>
       </div>
 
-      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900">
+      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-950">
         {isLoading ? (
           <div className="p-8 text-center text-stone-500">جاري التحميل...</div>
         ) : products.length === 0 ? (

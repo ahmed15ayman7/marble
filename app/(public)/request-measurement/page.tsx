@@ -56,7 +56,7 @@ export default function RequestMeasurementPage() {
 
   if (submitted) {
     return (
-      <div className="min-h-screen bg-stone-50 dark:bg-stone-900 flex items-center justify-center pt-20">
+      <div className="min-h-screen bg-stone-950 flex items-center justify-center pt-20">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -89,7 +89,7 @@ export default function RequestMeasurementPage() {
       />
 
       {/* Steps */}
-      <section className="py-12 bg-white dark:bg-stone-900 border-b border-stone-100 dark:border-stone-800">
+      <section className="py-12 bg-stone-950 border-b border-stone-100 dark:border-stone-800">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
             {steps.map((step, i) => (
@@ -113,10 +113,10 @@ export default function RequestMeasurementPage() {
       </section>
 
       {/* Form */}
-      <section className="py-16 bg-stone-50 dark:bg-stone-900/50">
+      <section className="py-16 bg-stone-950/50">
         <div className="container mx-auto px-4">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white dark:bg-stone-800 rounded-3xl shadow-xl p-8 md:p-10">
+            <div className="bg-stone-900 rounded-3xl shadow-xl p-8 md:p-10">
               <div className="flex items-center gap-3 mb-8">
                 <div className="w-12 h-12 bg-gold-100 dark:bg-gold-900/20 rounded-2xl flex items-center justify-center">
                   <Ruler className="w-6 h-6 text-gold-600" />

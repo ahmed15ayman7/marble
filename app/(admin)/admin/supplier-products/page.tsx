@@ -105,7 +105,7 @@ export default function AdminSupplierProductsPage() {
           />
         </div>
         <select
-          className="rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 px-4 py-2 text-sm"
+          className="rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-950 px-4 py-2 text-sm"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -115,7 +115,7 @@ export default function AdminSupplierProductsPage() {
         </select>
       </div>
 
-      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden">
+      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-950 overflow-hidden">
         {isLoading ? (
           <div className="p-8 text-center text-stone-500">جاري التحميل...</div>
         ) : products.length === 0 ? (

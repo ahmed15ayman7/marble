@@ -54,7 +54,7 @@ export default function SupplierProductsPage() {
         description="تصفح منتجات الرخام والجرانيت من موردينا المعتمدين"
       />
 
-      <section className="py-12 bg-white dark:bg-stone-900">
+      <section className="py-12 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="flex flex-col sm:flex-row gap-4 mb-8">
             <div className="relative flex-1">
@@ -70,7 +70,7 @@ export default function SupplierProductsPage() {
               />
             </div>
             <select
-              className="rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-900 px-4 py-2 text-sm"
+              className="rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-950 px-4 py-2 text-sm"
               value={category}
               onChange={(e) => {
                 setCategory(e.target.value);

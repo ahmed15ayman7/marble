@@ -82,7 +82,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         className=""
       />
 
-      <section className="py-12 bg-white dark:bg-stone-900">
+      <section className="py-12 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
             {/* Filters Sidebar */}

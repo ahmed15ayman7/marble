@@ -144,7 +144,7 @@ export default async function AdminDashboard() {
             ) : (
               <div className="space-y-3">
                 {stats.recentMessages.map((msg) => (
-                  <div key={msg.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-stone-800">
+                  <div key={msg.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-900">
                     <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center shrink-0">
                       <MessageSquare className="w-4 h-4 text-purple-600" />
                     </div>
@@ -184,7 +184,7 @@ export default async function AdminDashboard() {
             ) : (
               <div className="space-y-3">
                 {stats.recentMeasurements.map((req) => (
-                  <div key={req.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-stone-800">
+                  <div key={req.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-900">
                     <div className="w-8 h-8 bg-gold-100 dark:bg-gold-900/20 rounded-full flex items-center justify-center shrink-0">
                       <Ruler className="w-4 h-4 text-gold-600" />
                     </div>

@@ -96,11 +96,11 @@ export default async function DashboardPage() {
 
       {/* Quick actions */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
-        <div className="bg-gradient-to-br from-gold-500 to-gold-700 rounded-2xl p-6 text-white">
+        <div className="bg-gradient-to-br from-gold-700 to-gold-700 rounded-2xl p-6 text-white">
           <Ruler className="w-8 h-8 mb-3 opacity-80" />
           <h3 className="font-bold text-lg mb-1">طلب قياس مجاني</h3>
           <p className="text-gold-100 text-sm mb-4">فريقنا يزورك ويقيس بالدقة</p>
-          <Button asChild size="sm" className="bg-white text-gold-700 hover:bg-gold-50">
+          <Button asChild size="sm" className="bg-stone-900 text-gold-400 hover:bg-stone-800 hover:text-gold-300">
             <Link href="/request-measurement">احجز الآن</Link>
           </Button>
         </div>
@@ -108,7 +108,7 @@ export default async function DashboardPage() {
           <MessageSquare className="w-8 h-8 mb-3 opacity-80" />
           <h3 className="font-bold text-lg mb-1">تواصل معنا</h3>
           <p className="text-stone-300 text-sm mb-4">لديك سؤال أو استفسار؟</p>
-          <Button asChild size="sm" className="bg-white text-stone-800 hover:bg-stone-100">
+          <Button asChild size="sm" className="bg-stone-900 text-stone-200 hover:bg-stone-800">
             <Link href="/contact">اتصل بنا</Link>
           </Button>
         </div>
@@ -132,7 +132,7 @@ export default async function DashboardPage() {
                 {measurements.map((req) => {
                   const StatusIcon = statusIcons[req.status] ?? Clock;
                   return (
-                    <div key={req.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-stone-800">
+                    <div key={req.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-900">
                       <div className="w-8 h-8 bg-gold-100 dark:bg-gold-900/20 rounded-full flex items-center justify-center shrink-0">
                         <StatusIcon className="w-4 h-4 text-gold-600" />
                       </div>
@@ -167,7 +167,7 @@ export default async function DashboardPage() {
             ) : (
               <div className="space-y-3">
                 {messages.map((msg) => (
-                  <div key={msg.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-50 dark:bg-stone-800">
+                  <div key={msg.id} className="flex items-start gap-3 p-3 rounded-xl bg-stone-900">
                     <div className="w-8 h-8 bg-purple-100 dark:bg-purple-900/20 rounded-full flex items-center justify-center shrink-0">
                       <MessageSquare className="w-4 h-4 text-purple-600" />
                     </div>

@@ -32,7 +32,7 @@ export default async function SuppliersPage() {
         description="اكتشف موردي الرخام والجرانيت المعتمدين لدينا"
       />
 
-      <section className="py-12 bg-white dark:bg-stone-900">
+      <section className="py-12 bg-stone-950">
         <div className="container mx-auto px-4">
           {suppliers.length === 0 ? (
             <div className="text-center py-16">

@@ -35,7 +35,7 @@ export function ClientSidebar() {
       {/* Mobile toggle */}
       <button
         onClick={() => setMobileOpen(true)}
-        className="fixed top-4 right-4 z-50 p-2 bg-white dark:bg-stone-800 rounded-lg shadow-md border border-stone-200 dark:border-stone-700 lg:hidden"
+        className="fixed top-4 right-4 z-50 p-2 bg-stone-900 rounded-lg shadow-md border border-stone-200 dark:border-stone-700 lg:hidden"
       >
         <Menu className="w-5 h-5" />
       </button>
@@ -51,14 +51,14 @@ export function ClientSidebar() {
       {/* Sidebar */}
       <aside
         className={cn(
-          "fixed top-0 right-0 h-full bg-white dark:bg-stone-900 border-l border-stone-200 dark:border-stone-800 z-50 flex flex-col transition-all duration-300",
+          "fixed top-0 right-0 h-full bg-stone-950 border-l border-stone-200 dark:border-stone-800 z-50 flex flex-col transition-all duration-300",
           collapsed ? "w-16" : "w-64",
           mobileOpen ? "translate-x-0" : "translate-x-full lg:translate-x-0"
         )}
       >
         {/* Header */}
         <div className="flex items-center gap-3 p-4 border-b border-stone-100 dark:border-stone-800 h-16">
-          <div className="w-9 h-9 bg-gradient-to-br from-gold-500 to-gold-700 rounded-lg flex items-center justify-center shrink-0">
+          <div className="w-9 h-9 bg-gradient-to-br from-gold-700 to-gold-700 rounded-lg flex items-center justify-center shrink-0">
             <Diamond className="w-5 h-5 text-white" />
           </div>
           {!collapsed && (

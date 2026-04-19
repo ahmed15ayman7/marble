@@ -38,7 +38,7 @@ export function PageHeader({ title, subtitle, description, className, center = t
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             className={cn(
-              "inline-flex items-center gap-2 bg-gold-500/10 border border-gold-500/20 rounded-full px-4 py-2 mb-5",
+              "inline-flex items-center gap-2 bg-gold-700/10 border border-gold-700/20 rounded-full px-4 py-2 mb-5",
             )}
           >
             <span className="w-2 h-2 bg-gold-400 rounded-full animate-pulse" />

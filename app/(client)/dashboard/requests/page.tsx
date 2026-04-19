@@ -101,7 +101,7 @@ export default async function RequestsPage({
                     </div>
 
                     {req.details && (
-                      <p className="mt-3 text-xs text-stone-500 bg-stone-50 dark:bg-stone-800 rounded-lg p-3 leading-relaxed">
+                      <p className="mt-3 text-xs text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
                         {req.details}
                       </p>
                     )}
@@ -142,7 +142,7 @@ export default async function RequestsPage({
                     </div>
 
                     {req.description && (
-                      <p className="mt-3 text-xs text-stone-500 bg-stone-50 dark:bg-stone-800 rounded-lg p-3 leading-relaxed">
+                      <p className="mt-3 text-xs text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
                         {req.description}
                       </p>
                     )}
@@ -186,7 +186,7 @@ export default async function RequestsPage({
                       {msg.phone && <InfoRow icon={Phone} text={msg.phone} dir="ltr" />}
                     </div>
 
-                    <div className="bg-stone-50 dark:bg-stone-800 rounded-xl p-4">
+                    <div className="bg-stone-900 rounded-xl p-4">
                       <p className="text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
                         {msg.message}
                       </p>

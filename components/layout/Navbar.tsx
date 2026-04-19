@@ -79,9 +79,9 @@ export function Navbar() {
     cn(
       "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
       pathname === href
-        ? "text-gold-600 bg-gold-50 dark:bg-gold-900/20"
+        ? "text-gold-400 bg-gold-900/35"
         : isScrolled
-        ? "text-stone-700 hover:text-gold-600 hover:bg-gold-50 dark:text-stone-200 dark:hover:bg-gold-900/20"
+        ? "text-stone-300 hover:text-gold-400 hover:bg-gold-900/20"
         : "text-white/90 hover:text-white hover:bg-white/10"
     );
 
@@ -89,8 +89,8 @@ export function Navbar() {
     cn(
       "block px-4 py-3 rounded-lg text-sm font-medium transition-colors",
       pathname === href
-        ? "text-gold-600 bg-gold-50 dark:bg-gold-900/20"
-        : "text-stone-700 dark:text-stone-200 hover:bg-stone-50 dark:hover:bg-stone-800"
+        ? "text-gold-400 bg-gold-900/35"
+        : "text-stone-300 hover:bg-stone-900"
     );
 
   return (
@@ -98,7 +98,7 @@ export function Navbar() {
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled
-          ? "bg-white/95 dark:bg-stone-900/95 backdrop-blur-md shadow-lg border-b border-gold-200/50"
+          ? "bg-stone-950/95 backdrop-blur-md shadow-lg border-b border-stone-900"
           : "bg-transparent"
       )}
     >
@@ -106,16 +106,16 @@ export function Navbar() {
 
         {/* ── Logo ────────────────────────────────────────────── */}
         <Link href="/" className="flex items-center gap-3 group shrink-0">
-          <div className="w-10 h-10 bg-gradient-to-br from-gold-500 to-gold-700 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-gold-300/50 transition-shadow">
+          <div className="w-10 h-10 bg-gradient-to-br from-gold-700 to-gold-700 rounded-lg flex items-center justify-center shadow-md group-hover:shadow-gold-300/50 transition-shadow">
             <Diamond className="w-6 h-6 text-white" />
           </div>
           <div className="flex flex-col">
             <span className={cn("font-bold text-lg leading-tight transition-colors",
-              isScrolled ? "text-stone-800 dark:text-white" : "text-white")}>
+              isScrolled ? "text-stone-100" : "text-white")}>
               نور الرخام
             </span>
             <span className={cn("text-xs transition-colors",
-              isScrolled ? "text-gold-600" : "text-gold-300")}>
+              isScrolled ? "text-gold-500" : "text-gold-300")}>
               والجرانيت
             </span>
           </div>
@@ -140,13 +140,13 @@ export function Navbar() {
                   initial={{ opacity: 0, y: -8 }}
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -8 }}
-                  className="absolute top-full right-0 mt-1 w-52 bg-white dark:bg-stone-800 rounded-xl shadow-xl border border-stone-100 dark:border-stone-700 py-2 z-50"
+                  className="absolute top-full right-0 mt-1 w-52 bg-stone-900 rounded-xl shadow-xl border border-stone-800 py-2 z-50"
                 >
                   {link.children.map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="block px-4 py-2.5 text-sm text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700 transition-colors"
+                      className="block px-4 py-2.5 text-sm text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
                     >
                       {child.label}
                     </Link>
@@ -163,7 +163,7 @@ export function Navbar() {
           <a
             href="tel:+201000000000"
             className={cn("flex items-center gap-2 text-sm font-medium transition-colors",
-              isScrolled ? "text-stone-700 dark:text-stone-200" : "text-white/90")}
+              isScrolled ? "text-stone-300" : "text-white/90")}
           >
             <Phone className="w-4 h-4" />
             <span dir="ltr">+20 100 000 0000</span>
@@ -180,7 +180,7 @@ export function Navbar() {
                 className={cn(
                   "flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm font-medium transition-all",
                   isScrolled
-                    ? "text-stone-700 hover:bg-stone-100 dark:text-stone-200 dark:hover:bg-stone-800"
+                    ? "text-stone-200 hover:bg-stone-900"
                     : "text-white hover:bg-white/10"
                 )}
               >
@@ -198,11 +198,11 @@ export function Navbar() {
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: -8, scale: 0.95 }}
                     transition={{ duration: 0.15 }}
-                    className="absolute top-full left-0 mt-2 w-52 bg-white dark:bg-stone-800 rounded-2xl shadow-xl border border-stone-100 dark:border-stone-700 py-2 z-50"
+                    className="absolute top-full left-0 mt-2 w-52 bg-stone-900 rounded-2xl shadow-xl border border-stone-800 py-2 z-50"
                   >
                     {/* User info */}
-                    <div className="px-4 py-3 border-b border-stone-100 dark:border-stone-700">
-                      <p className="text-sm font-semibold text-stone-900 dark:text-white truncate">
+                    <div className="px-4 py-3 border-b border-stone-800">
+                      <p className="text-sm font-semibold text-stone-100 truncate">
                         {session.user?.name}
                       </p>
                       <p className="text-xs text-stone-400 truncate">{session.user?.email}</p>
@@ -212,7 +212,7 @@ export function Navbar() {
                       <Link
                         href={dashboardHref}
                         onClick={() => setUserMenu(false)}
-                        className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700 transition-colors"
+                        className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
                       >
                         <LayoutDashboard className="w-4 h-4" />
                         {role === "ADMIN" ? "لوحة الإدارة" : role === "SUPPLIER" ? "لوحة المورد" : "لوحتي"}
@@ -222,7 +222,7 @@ export function Navbar() {
                         <Link
                           href={profileHref}
                           onClick={() => setUserMenu(false)}
-                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700 transition-colors"
+                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
                         >
                           <User className="w-4 h-4" />
                           ملفي الشخصي
@@ -230,10 +230,10 @@ export function Navbar() {
                       )}
                     </div>
 
-                    <div className="border-t border-stone-100 dark:border-stone-700 pt-1">
+                    <div className="border-t border-stone-800 pt-1">
                       <button
                         onClick={() => { setUserMenu(false); signOut({ callbackUrl: "/" }); }}
-                        className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-500 hover:bg-red-50 dark:hover:bg-red-900/10 transition-colors"
+                        className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-400 hover:bg-red-950/40 transition-colors"
                       >
                         <LogOut className="w-4 h-4" />
                         تسجيل الخروج
@@ -248,7 +248,7 @@ export function Navbar() {
             <div className="flex items-center gap-2">
               <Button asChild variant="ghost" size="sm"
                 className={cn(isScrolled
-                  ? "text-stone-700 hover:text-gold-700 hover:bg-gold-50"
+                  ? "text-stone-300 hover:text-gold-400 hover:bg-gold-900/20"
                   : "text-white hover:bg-white/10"
                 )}
               >
@@ -280,7 +280,7 @@ export function Navbar() {
           className={cn(
             "lg:hidden p-2 rounded-lg transition-colors",
             isScrolled
-              ? "text-stone-700 hover:bg-stone-100 dark:text-white dark:hover:bg-stone-800"
+              ? "text-stone-200 hover:bg-stone-900"
               : "text-white hover:bg-white/10"
           )}
         >
@@ -295,7 +295,7 @@ export function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: "auto" }}
             exit={{ opacity: 0, height: 0 }}
-            className="lg:hidden bg-white dark:bg-stone-900 border-t border-stone-100 dark:border-stone-800 overflow-hidden"
+            className="lg:hidden bg-stone-950 border-t border-stone-900 overflow-hidden"
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-1">
               {/* Nav links */}
@@ -310,7 +310,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-3 py-2 text-sm text-stone-600 dark:text-stone-300 hover:text-gold-600 transition-colors"
+                          className="block px-3 py-2 text-sm text-stone-400 hover:text-gold-400 transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -321,16 +321,16 @@ export function Navbar() {
               ))}
 
               {/* Auth + CTA */}
-              <div className="pt-4 border-t border-stone-100 dark:border-stone-800 flex flex-col gap-2">
+              <div className="pt-4 border-t border-stone-900 flex flex-col gap-2">
                 {session ? (
                   <>
                     {/* Logged in: show user info + dashboard */}
-                    <div className="flex items-center gap-3 px-4 py-3 bg-stone-50 dark:bg-stone-800 rounded-xl mb-1">
+                    <div className="flex items-center gap-3 px-4 py-3 bg-stone-900 rounded-xl mb-1">
                       <div className="w-9 h-9 bg-gradient-to-br from-gold-400 to-gold-700 rounded-full flex items-center justify-center text-white font-bold shrink-0">
                         {session.user?.name?.charAt(0)?.toUpperCase() ?? "U"}
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-semibold text-stone-900 dark:text-white truncate">
+                        <p className="text-sm font-semibold text-stone-100 truncate">
                           {session.user?.name}
                         </p>
                         <p className="text-xs text-stone-400 truncate">{session.user?.email}</p>
@@ -344,7 +344,7 @@ export function Navbar() {
                     </Button>
                     <Button
                       variant="ghost"
-                      className="w-full justify-start gap-2 text-red-500 hover:text-red-600 hover:bg-red-50"
+                      className="w-full justify-start gap-2 text-red-400 hover:text-red-300 hover:bg-red-950/40"
                       onClick={() => signOut({ callbackUrl: "/" })}
                     >
                       <LogOut className="w-4 h-4" />

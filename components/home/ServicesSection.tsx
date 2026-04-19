@@ -18,7 +18,7 @@ const services = [
     icon: Wrench,
     title: "توريد وتركيب",
     description: "نوفر خدمة متكاملة للتوريد والتركيب الاحترافي بأيدي فنيين متخصصين لجميع أنواع الرخام والجرانيت.",
-    color: "from-gold-500 to-gold-600",
+    color: "from-gold-700 to-gold-600",
     href: "/services#install",
   },
   {
@@ -46,7 +46,7 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-24 bg-stone-50 dark:bg-stone-900/50">
+    <section className="py-24 bg-stone-950/50">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16">
@@ -87,7 +87,7 @@ export function ServicesSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.1 }}
-              className={`group bg-white dark:bg-stone-800 rounded-2xl p-6 border border-stone-100 dark:border-stone-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${i === 4 ? "md:col-span-2 lg:col-span-1" : ""}`}
+              className={`group bg-stone-900 rounded-2xl p-6 border border-stone-100 dark:border-stone-700 hover:shadow-xl transition-all duration-300 hover:-translate-y-1 ${i === 4 ? "md:col-span-2 lg:col-span-1" : ""}`}
             >
               <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 <service.icon className="w-7 h-7 text-white" />

@@ -79,7 +79,7 @@ export default function CustomerFeedbackPage() {
                 <Star
                   className={`w-10 h-10 transition-colors ${
                     r <= (rating ?? 0)
-                      ? "fill-gold-500 text-gold-500"
+                      ? "fill-gold-700 text-gold-700"
                       : "text-stone-200 hover:text-stone-300"
                   }`}
                 />

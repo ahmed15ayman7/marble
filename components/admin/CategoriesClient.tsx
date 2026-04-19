@@ -359,7 +359,7 @@ export function CategoriesClient({ initialCategories }: Props) {
 /* ── Mini product card ─────────────────────────────────────── */
 function ProductMiniCard({ product }: { product: Product }) {
   return (
-    <div className="bg-white dark:bg-stone-800 rounded-xl border border-stone-100 dark:border-stone-700 overflow-hidden hover:shadow-md transition-shadow group">
+    <div className="bg-stone-900 rounded-xl border border-stone-100 dark:border-stone-700 overflow-hidden hover:shadow-md transition-shadow group">
       {/* Image */}
       <div className="relative aspect-video bg-stone-100 dark:bg-stone-700 overflow-hidden">
         {product.images?.[0] ? (
@@ -371,7 +371,7 @@ function ProductMiniCard({ product }: { product: Product }) {
           <div className="w-full h-full flex items-center justify-center text-2xl">🪨</div>
         )}
         {product.isFeatured && (
-          <div className="absolute top-2 right-2 w-5 h-5 bg-gold-500 rounded-full flex items-center justify-center">
+          <div className="absolute top-2 right-2 w-5 h-5 bg-gold-700 rounded-full flex items-center justify-center">
             <Star className="w-3 h-3 text-white" />
           </div>
         )}

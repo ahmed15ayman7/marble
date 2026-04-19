@@ -70,7 +70,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   return (
     <div className="pt-20">
       {/* Breadcrumb */}
-      <div className="bg-stone-50 dark:bg-stone-900/50 py-4">
+      <div className="bg-stone-950/50 py-4">
         <div className="container mx-auto px-4">
           <div className="flex items-center gap-2 text-sm text-stone-500">
             <Link href="/" className="hover:text-gold-600 transition-colors">الرئيسية</Link>
@@ -83,7 +83,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       </div>
 
       {/* Product Details */}
-      <section className="py-12 bg-white dark:bg-stone-900">
+      <section className="py-12 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Images */}
@@ -170,7 +170,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   { label: "التصنيف", value: product.category?.nameAr },
                   { label: "الوحدة", value: product.priceUnit ?? "م²" },
                 ].map((spec, i) => (
-                  <div key={i} className="bg-stone-50 dark:bg-stone-800 rounded-xl p-3">
+                  <div key={i} className="bg-stone-900 rounded-xl p-3">
                     <p className="text-xs text-stone-400 mb-0.5">{spec.label}</p>
                     <p className="font-semibold text-stone-900 dark:text-white text-sm">{spec.value}</p>
                   </div>
@@ -198,7 +198,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
 
       {/* Related Products */}
       {relatedProducts.length > 0 && (
-        <section className="py-12 bg-stone-50 dark:bg-stone-900/50">
+        <section className="py-12 bg-stone-950/50">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-8">
               <h2 className="text-2xl font-bold text-stone-900 dark:text-white">منتجات مشابهة</h2>
@@ -214,7 +214,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 <Link
                   key={related.id}
                   href={`/products/${related.slug}`}
-                  className="group bg-white dark:bg-stone-800 rounded-2xl overflow-hidden border border-stone-100 dark:border-stone-700 hover:shadow-lg transition-shadow"
+                  className="group bg-stone-900 rounded-2xl overflow-hidden border border-stone-100 dark:border-stone-700 hover:shadow-lg transition-shadow"
                 >
                   <div className="relative aspect-[4/3] bg-stone-100 dark:bg-stone-700 overflow-hidden">
                     {related.images && related.images.length > 0 ? (

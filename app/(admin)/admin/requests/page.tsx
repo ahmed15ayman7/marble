@@ -72,7 +72,7 @@ export default async function AdminRequestsPage() {
                   </div>
 
                   {req.details && (
-                    <p className="mt-3 text-sm text-stone-500 bg-stone-50 dark:bg-stone-800 rounded-lg p-3 leading-relaxed">
+                    <p className="mt-3 text-sm text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
                       {req.details}
                     </p>
                   )}
@@ -118,7 +118,7 @@ export default async function AdminRequestsPage() {
                   </div>
 
                   {req.description && (
-                    <p className="mt-3 text-sm text-stone-500 bg-stone-50 dark:bg-stone-800 rounded-lg p-3 leading-relaxed">
+                    <p className="mt-3 text-sm text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
                       {req.description}
                     </p>
                   )}
@@ -177,7 +177,7 @@ function UpdateStatusForm({
         <select
           name="status"
           defaultValue={currentStatus}
-          className="flex-1 text-sm rounded-lg border border-stone-200 dark:border-stone-700 bg-white dark:bg-stone-800 px-3 py-1.5 text-stone-900 dark:text-white"
+          className="flex-1 text-sm rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-900 px-3 py-1.5 text-stone-900 dark:text-white"
         >
           {statuses.map((s) => (
             <option key={s} value={s}>

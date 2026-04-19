@@ -51,7 +51,7 @@ export default function AdminFeedbackPage() {
         <p className="text-stone-500 mt-1">تقييمات العملاء</p>
       </div>
 
-      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden">
+      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-950 overflow-hidden">
         {isLoading ? (
           <div className="p-8 text-center text-stone-500">جاري التحميل...</div>
         ) : feedback.length === 0 ? (
@@ -87,7 +87,7 @@ export default function AdminFeedbackPage() {
                           key={i}
                           className={`w-4 h-4 ${
                             i < f.rating
-                              ? "fill-gold-500 text-gold-500"
+                              ? "fill-gold-700 text-gold-700"
                               : "text-stone-200"
                           }`}
                         />

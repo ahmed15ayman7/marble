@@ -30,7 +30,7 @@ const services = [
     id: "install",
     icon: Wrench,
     title: "توريد وتركيب",
-    color: "from-gold-500 to-gold-600",
+    color: "from-gold-700 to-gold-600",
     bgColor: "bg-gold-50 dark:bg-gold-900/10",
     description: "خدمة متكاملة من اختيار الخامة المناسبة حتى التركيب الاحترافي النهائي.",
     features: [
@@ -102,7 +102,7 @@ export default function ServicesPage() {
         className=""
       />
 
-      <section className="py-16 bg-white dark:bg-stone-900">
+      <section className="py-16 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="space-y-16">
             {services.map((service, i) => (
@@ -146,7 +146,7 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 bg-stone-50 dark:bg-stone-900/50">
+      <section className="py-16 bg-stone-950/50">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl font-bold text-stone-900 dark:text-white mb-4">
             جاهز للبدء؟

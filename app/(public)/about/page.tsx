@@ -41,7 +41,7 @@ export default function AboutPage() {
       />
 
       {/* Story */}
-      <section className="py-16 bg-white dark:bg-stone-900">
+      <section className="py-16 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -68,7 +68,7 @@ export default function AboutPage() {
                   { label: "دول التصدير", value: "+15" },
                   { label: "أنواع المنتجات", value: "+50" },
                 ].map((item, i) => (
-                  <div key={i} className="text-center bg-white dark:bg-stone-800 rounded-2xl p-5 shadow-sm">
+                  <div key={i} className="text-center bg-stone-900 rounded-2xl p-5 shadow-sm">
                     <div className="text-3xl font-bold text-gold-600 mb-1">{item.value}</div>
                     <div className="text-sm text-stone-500 dark:text-stone-400">{item.label}</div>
                   </div>
@@ -80,14 +80,14 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 bg-stone-50 dark:bg-stone-900/50">
+      <section className="py-16 bg-stone-950/50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-stone-900 dark:text-white mb-12">
             قيمنا ومبادئنا
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {values.map((value, i) => (
-              <div key={i} className="bg-white dark:bg-stone-800 rounded-2xl p-6 text-center border border-stone-100 dark:border-stone-700">
+              <div key={i} className="bg-stone-900 rounded-2xl p-6 text-center border border-stone-100 dark:border-stone-700">
                 <div className="w-14 h-14 bg-gold-100 dark:bg-gold-900/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
                   <value.icon className="w-7 h-7 text-gold-600" />
                 </div>
@@ -100,7 +100,7 @@ export default function AboutPage() {
       </section>
 
       {/* Services Offered */}
-      <section className="py-16 bg-white dark:bg-stone-900">
+      <section className="py-16 bg-stone-950">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl font-bold text-center text-stone-900 dark:text-white mb-12">
             ماذا نقدم

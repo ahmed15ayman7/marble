@@ -21,7 +21,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4, delay: index * 0.05 }}
-      className="group relative bg-white dark:bg-stone-800 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 dark:border-stone-700"
+      className="group relative bg-stone-900 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 border border-stone-100 dark:border-stone-700"
     >
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden bg-stone-100 dark:bg-stone-700">
@@ -60,7 +60,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
         {/* Origin Badge */}
         <div className="absolute top-3 left-3">
-          <Badge variant="outline" className="text-xs bg-white/80 dark:bg-stone-800/80 backdrop-blur-sm">
+          <Badge variant="outline" className="text-xs bg-stone-950/90 backdrop-blur-sm border-stone-700">
             <MapPin className="w-3 h-3 ml-1" />
             {getOriginLabel(product.origin)}
           </Badge>

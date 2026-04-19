@@ -45,7 +45,7 @@ export function ProductFilters() {
   const hasActiveFilters = currentType || currentOrigin || currentSearch;
 
   return (
-    <div className="bg-white dark:bg-stone-800 rounded-2xl border border-stone-100 dark:border-stone-700 p-6 shadow-sm">
+    <div className="bg-stone-900 rounded-2xl border border-stone-100 dark:border-stone-700 p-6 shadow-sm">
       <div className="flex items-center gap-2 mb-6">
         <SlidersHorizontal className="w-5 h-5 text-gold-600" />
         <h3 className="font-semibold text-stone-900 dark:text-white">تصفية المنتجات</h3>

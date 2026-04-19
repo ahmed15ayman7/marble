@@ -169,13 +169,13 @@ export default function RegisterPage() {
         transition={{ duration: 0.5 }}
         className="relative z-10 w-full max-w-md"
       >
-        <div className="bg-white dark:bg-stone-800 rounded-3xl shadow-2xl p-8">
+        <div className="bg-stone-900 rounded-3xl shadow-2xl p-8">
           <div className="flex flex-col items-center mb-8">
             <motion.div
               initial={{ scale: 0.8, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="w-16 h-16 bg-gradient-to-br from-gold-500 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg mb-4"
+              className="w-16 h-16 bg-gradient-to-br from-gold-700 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg mb-4"
             >
               <Diamond className="w-8 h-8 text-white" />
             </motion.div>

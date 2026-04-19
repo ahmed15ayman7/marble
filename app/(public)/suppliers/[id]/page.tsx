@@ -59,11 +59,11 @@ export default async function SupplierDetailPage({ params }: Props) {
         description={supplier.description ?? undefined}
       />
 
-      <section className="py-12 bg-white dark:bg-stone-900">
+      <section className="py-12 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-4 gap-8">
             <div className="lg:col-span-1">
-              <div className="sticky top-24 p-6 rounded-2xl bg-stone-50 dark:bg-stone-800">
+              <div className="sticky top-24 p-6 rounded-2xl bg-stone-900">
                 <h3 className="font-semibold text-stone-900 dark:text-white mb-4">
                   معلومات المورد
                 </h3>

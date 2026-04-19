@@ -30,7 +30,7 @@ export default async function AdminMessagesPage() {
         {messages.map((msg) => (
           <Card
             key={msg.id}
-            className={`border-stone-100 dark:border-stone-800 ${!msg.isRead ? "border-r-4 border-r-gold-500" : ""}`}
+            className={`border-stone-100 dark:border-stone-800 ${!msg.isRead ? "border-r-4 border-r-gold-700" : ""}`}
           >
             <CardContent className="pt-5">
               <div className="flex items-start justify-between mb-4">
@@ -69,7 +69,7 @@ export default async function AdminMessagesPage() {
                 )}
               </div>
 
-              <div className="bg-stone-50 dark:bg-stone-800 rounded-xl p-4">
+              <div className="bg-stone-900 rounded-xl p-4">
                 <p className="text-stone-700 dark:text-stone-300 text-sm leading-relaxed whitespace-pre-wrap">
                   {msg.message}
                 </p>

@@ -73,7 +73,7 @@ export default function AdminSuppliersPage() {
         <p className="text-stone-500 mt-1">إدارة الموردين والموافقة عليهم</p>
       </div>
 
-      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-white dark:bg-stone-900 overflow-hidden">
+      <div className="rounded-xl border border-stone-200 dark:border-stone-800 bg-stone-950 overflow-hidden">
         {isLoading ? (
           <div className="p-8 text-center text-stone-500">جاري التحميل...</div>
         ) : suppliers.length === 0 ? (

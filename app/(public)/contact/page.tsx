@@ -84,7 +84,7 @@ export default function ContactPage() {
         className=""
       />
 
-      <section className="py-16 bg-white dark:bg-stone-900">
+      <section className="py-16 bg-stone-950">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
@@ -102,7 +102,7 @@ export default function ContactPage() {
                     className={`${info.bg} rounded-2xl p-5`}
                   >
                     <div className="flex items-start gap-4">
-                      <div className="w-10 h-10 bg-white dark:bg-stone-800 rounded-xl flex items-center justify-center shadow-sm shrink-0">
+                      <div className="w-10 h-10 bg-stone-900 rounded-xl flex items-center justify-center shadow-sm shrink-0">
                         <info.icon className={`w-5 h-5 ${info.color}`} />
                       </div>
                       <div>
@@ -119,7 +119,7 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div className="lg:col-span-2">
-              <div className="bg-stone-50 dark:bg-stone-800 rounded-3xl p-8">
+              <div className="bg-stone-900 rounded-3xl p-8">
                 <h2 className="text-2xl font-bold text-stone-900 dark:text-white mb-8">
                   أرسل رسالة
                 </h2>

@@ -42,7 +42,7 @@ export default async function HomePage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="/request-measurement"
-              className="bg-white text-gold-700 font-bold px-8 py-4 rounded-xl hover:bg-gold-50 transition-colors text-lg shadow-xl"
+              className="bg-stone-900 text-gold-400 font-bold px-8 py-4 rounded-xl hover:bg-stone-800 hover:text-gold-300 transition-colors text-lg shadow-xl border border-stone-800"
             >
               احجز قياس مجاني الآن
             </a>
