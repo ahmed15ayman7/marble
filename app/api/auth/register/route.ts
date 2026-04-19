@@ -51,6 +51,7 @@ export async function POST(request: NextRequest) {
     );
   } catch (error) {
     console.error("POST /api/auth/register error:", error);
+    console.log(error);
     return NextResponse.json(
       { error: "حدث خطأ في إنشاء الحساب" },
       { status: 500 }

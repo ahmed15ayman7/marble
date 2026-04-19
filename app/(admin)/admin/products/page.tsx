@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { prisma } from "@/lib/prisma";
-import { Plus, Pencil, Trash2, Star, Package } from "lucide-react";
+import { Plus, Pencil, Star, Package } from "lucide-react";
+import { DeleteProductButton } from "@/components/admin/DeleteProductButton";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -123,31 +124,5 @@ export default async function AdminProductsPage() {
         </CardContent>
       </Card>
     </div>
-  );
-}
-
-function DeleteProductButton({ productId }: { productId: string }) {
-  return (
-    <form
-      action={async () => {
-        "use server";
-        const { prisma } = await import("@/lib/prisma");
-        await prisma.product.delete({ where: { id: productId } });
-        const { revalidatePath } = await import("next/cache");
-        revalidatePath("/admin/products");
-      }}
-    >
-      <button
-        type="submit"
-        className="w-8 h-8 flex items-center justify-center rounded-md hover:bg-red-50 dark:hover:bg-red-900/10 text-stone-400 hover:text-red-500 transition-colors"
-        onClick={(e) => {
-          if (!confirm("هل أنت متأكد من حذف هذا المنتج؟")) {
-            e.preventDefault();
-          }
-        }}
-      >
-        <Trash2 className="w-3.5 h-3.5" />
-      </button>
-    </form>
   );
 }
