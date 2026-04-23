@@ -155,7 +155,7 @@ export function CategoriesClient({ initialCategories }: Props) {
       {/* Header */}
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-stone-900 dark:text-white">التصنيفات</h1>
+          <h1 className="text-3xl font-bold text-stone-900 dark:text-white">التصنيفات</h1>
           <p className="text-stone-500 dark:text-stone-400 mt-1">
             {categories.length} تصنيف — إضافة وتعديل وعرض المنتجات
           </p>
@@ -182,7 +182,7 @@ export function CategoriesClient({ initialCategories }: Props) {
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2 flex-wrap">
                     <h3 className="font-bold text-stone-900 dark:text-white">{cat.nameAr}</h3>
-                    <span className="text-stone-400 text-sm">/ {cat.name}</span>
+                    <span className="text-stone-400 text-lg">/ {cat.name}</span>
                     <Badge variant={cat.type === "MARBLE" ? "marble" : "granite"} className="text-xs">
                       {cat.type === "MARBLE" ? "رخام" : "جرانيت"}
                     </Badge>
@@ -192,7 +192,7 @@ export function CategoriesClient({ initialCategories }: Props) {
                   )}
                   <div className="flex items-center gap-1 mt-1">
                     <Package className="w-3.5 h-3.5 text-stone-400" />
-                    <span className="text-sm text-stone-500 dark:text-stone-400">
+                    <span className="text-lg text-stone-500 dark:text-stone-400">
                       {cat._count.products} منتج
                     </span>
                   </div>
@@ -246,7 +246,7 @@ export function CategoriesClient({ initialCategories }: Props) {
                 ) : !products[cat.id] || products[cat.id].length === 0 ? (
                   <div className="text-center py-8">
                     <Package className="w-10 h-10 text-stone-300 mx-auto mb-2" />
-                    <p className="text-stone-400 text-sm">لا توجد منتجات في هذا التصنيف</p>
+                    <p className="text-stone-400 text-lg">لا توجد منتجات في هذا التصنيف</p>
                     <Button asChild variant="gold" size="sm" className="mt-3">
                       <Link href={`/admin/products/new`}>إضافة منتج</Link>
                     </Button>
@@ -254,7 +254,7 @@ export function CategoriesClient({ initialCategories }: Props) {
                 ) : (
                   <>
                     <div className="flex items-center justify-between mb-3">
-                      <p className="text-sm font-medium text-stone-600 dark:text-stone-400">
+                      <p className="text-lg font-medium text-stone-600 dark:text-stone-400">
                         {products[cat.id].length} منتج
                       </p>
                       <Button asChild variant="gold" size="sm">
@@ -368,7 +368,7 @@ function ProductMiniCard({ product }: { product: Product }) {
             fill className="object-cover group-hover:scale-105 transition-transform"
           />
         ) : (
-          <div className="w-full h-full flex items-center justify-center text-2xl">🪨</div>
+          <div className="w-full h-full flex items-center justify-center text-3xl">🪨</div>
         )}
         {product.isFeatured && (
           <div className="absolute top-2 right-2 w-5 h-5 bg-gold-700 rounded-full flex items-center justify-center">
@@ -384,7 +384,7 @@ function ProductMiniCard({ product }: { product: Product }) {
 
       {/* Info */}
       <div className="p-3">
-        <p className="font-medium text-stone-900 dark:text-white text-sm leading-tight line-clamp-1">
+        <p className="font-medium text-stone-900 dark:text-white text-lg leading-tight line-clamp-1">
           {product.nameAr}
         </p>
         <div className="flex items-center justify-between mt-1.5">

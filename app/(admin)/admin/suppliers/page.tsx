@@ -67,7 +67,7 @@ export default function AdminSuppliersPage() {
       className="space-y-6"
     >
       <div>
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           الموردين
         </h1>
         <p className="text-stone-500 mt-1">إدارة الموردين والموافقة عليهم</p>
@@ -97,7 +97,7 @@ export default function AdminSuppliersPage() {
                 <TableRow key={s.id}>
                   <TableCell className="font-medium">{s.companyName}</TableCell>
                   <TableCell>
-                    <span dir="ltr" className="text-sm">
+                    <span dir="ltr" className="text-lg">
                       {s.user?.email}
                     </span>
                   </TableCell>

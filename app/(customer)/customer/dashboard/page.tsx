@@ -15,7 +15,7 @@ export default function CustomerDashboardPage() {
       className="space-y-8"
     >
       <div>
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           لوحة التحكم
         </h1>
         <p className="text-stone-500 mt-1">مرحباً بك في حسابك</p>
@@ -32,7 +32,7 @@ export default function CustomerDashboardPage() {
                 <p className="font-semibold text-stone-900 dark:text-white">
                   تصفح المنتجات
                 </p>
-                <p className="text-sm text-stone-500">
+                <p className="text-lg text-stone-500">
                   اكتشف تشكيلتنا من الرخام والجرانيت
                 </p>
               </div>
@@ -53,7 +53,7 @@ export default function CustomerDashboardPage() {
                 <p className="font-semibold text-stone-900 dark:text-white">
                   أرسل تقييمك
                 </p>
-                <p className="text-sm text-stone-500">
+                <p className="text-lg text-stone-500">
                   شاركنا تجربتك معنا
                 </p>
               </div>
@@ -74,7 +74,7 @@ export default function CustomerDashboardPage() {
                 <p className="font-semibold text-stone-900 dark:text-white">
                   تواصل معنا
                 </p>
-                <p className="text-sm text-stone-500">
+                <p className="text-lg text-stone-500">
                   أرسل رسالة أو استفسار
                 </p>
               </div>

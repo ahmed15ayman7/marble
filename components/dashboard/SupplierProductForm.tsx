@@ -168,7 +168,7 @@ export function SupplierProductForm({
         <Textarea
           id="images"
           placeholder="/images/product1.jpg"
-          className="mt-1.5 min-h-[80px] font-mono text-sm"
+          className="mt-1.5 min-h-[80px] font-mono text-lg"
           {...register("imagesStr")}
         />
       </div>

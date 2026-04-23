@@ -60,7 +60,7 @@ export function CustomerSidebar() {
           </div>
           {!collapsed && (
             <div className="flex-1 min-w-0">
-              <p className="font-bold text-stone-900 dark:text-white text-sm leading-none truncate">
+              <p className="font-bold text-stone-900 dark:text-white text-lg leading-none truncate">
                 حسابي
               </p>
               <p className="text-gold-600 text-xs">الوادي للرخام</p>
@@ -94,7 +94,7 @@ export function CustomerSidebar() {
                 onClick={() => setMobileOpen(false)}
                 title={collapsed ? item.label : undefined}
                 className={cn(
-                  "flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all",
+                  "flex items-center gap-3 px-3 py-2.5 rounded-xl text-lg font-medium transition-all",
                   isActive
                     ? "bg-gold-600 text-white shadow-md shadow-gold-200 dark:shadow-gold-900/30"
                     : "text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 hover:text-stone-900 dark:hover:text-white"
@@ -110,7 +110,7 @@ export function CustomerSidebar() {
         <div className="p-3 border-t border-stone-100 dark:border-stone-800 space-y-1">
           <Link
             href="/"
-            className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors mb-1 w-full"
+            className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-lg text-stone-600 dark:text-stone-400 hover:bg-stone-100 dark:hover:bg-stone-800 transition-colors mb-1 w-full"
           >
             <Home className="w-5 h-5 shrink-0" />
             {!collapsed && <span>الموقع الرئيسي</span>}

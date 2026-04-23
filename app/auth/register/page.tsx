@@ -179,10 +179,10 @@ export default function RegisterPage() {
             >
               <Diamond className="w-8 h-8 text-white" />
             </motion.div>
-            <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
               {step === "form" ? "إنشاء حساب جديد" : "التحقق من البريد"}
             </h1>
-            <p className="text-stone-500 text-sm mt-1">
+            <p className="text-stone-500 text-lg mt-1">
               {step === "form" ? "انضم إلى الوادي للرخام والجرانيت" : "اختياري - يمكنك تخطيه"}
             </p>
           </div>
@@ -210,7 +210,7 @@ export default function RegisterPage() {
                     >
                       <input type="radio" value="CUSTOMER" className="sr-only" {...register("role")} />
                       <UserCircle className="w-5 h-5" />
-                      <span className="text-sm font-medium">عميل</span>
+                      <span className="text-lg font-medium">عميل</span>
                     </label>
                     <label
                       className={`flex-1 flex items-center justify-center gap-2 p-3 rounded-xl border-2 cursor-pointer transition-all ${
@@ -221,7 +221,7 @@ export default function RegisterPage() {
                     >
                       <input type="radio" value="SUPPLIER" className="sr-only" {...register("role")} />
                       <Store className="w-5 h-5" />
-                      <span className="text-sm font-medium">مورد</span>
+                      <span className="text-lg font-medium">مورد</span>
                     </label>
                   </div>
                   {errors.role && (
@@ -342,7 +342,7 @@ export default function RegisterPage() {
                 exit={{ opacity: 0, x: -20 }}
                 className="space-y-4"
               >
-                <p className="text-stone-600 dark:text-stone-400 text-sm">
+                <p className="text-stone-600 dark:text-stone-400 text-lg">
                   أدخل رمز التحقق المرسل إلى {pendingData?.email}
                 </p>
                 {!otpSent ? (
@@ -355,7 +355,7 @@ export default function RegisterPage() {
                       placeholder="000000"
                       maxLength={6}
                       dir="ltr"
-                      className="text-center text-lg tracking-[0.5em]"
+                      className="text-center text-xl tracking-[0.5em]"
                       value={otp}
                       onChange={(e) => setOtp(e.target.value.replace(/\D/g, ""))}
                     />
@@ -386,7 +386,7 @@ export default function RegisterPage() {
                     setOtp("");
                     setOtpSent(false);
                   }}
-                  className="w-full text-center text-sm text-stone-400 hover:text-stone-600"
+                  className="w-full text-center text-lg text-stone-400 hover:text-stone-600"
                 >
                   العودة
                 </button>
@@ -400,7 +400,7 @@ export default function RegisterPage() {
             <div className="flex-1 h-px bg-stone-200 dark:bg-stone-700" />
           </div>
 
-          <p className="text-center text-sm text-stone-500 dark:text-stone-400">
+          <p className="text-center text-lg text-stone-500 dark:text-stone-400">
             لديك حساب بالفعل؟{" "}
             <Link
               href="/auth/login"
@@ -413,7 +413,7 @@ export default function RegisterPage() {
           <div className="mt-4 text-center">
             <Link
               href="/"
-              className="text-sm text-stone-400 hover:text-gold-600 transition-colors"
+              className="text-lg text-stone-400 hover:text-gold-600 transition-colors"
             >
               ← العودة للموقع
             </Link>

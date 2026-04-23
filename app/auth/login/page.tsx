@@ -79,10 +79,10 @@ export default function LoginPage() {
             <div className="w-16 h-16 bg-gradient-to-br from-gold-700 to-gold-700 rounded-2xl flex items-center justify-center shadow-lg mb-4">
               <Diamond className="w-8 h-8 text-white" />
             </div>
-            <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+            <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
               تسجيل الدخول
             </h1>
-            <p className="text-stone-500 text-sm mt-1">
+            <p className="text-stone-500 text-lg mt-1">
               لوحة تحكم الوادي للرخام والجرانيت
             </p>
           </div>
@@ -144,7 +144,7 @@ export default function LoginPage() {
             <div className="flex-1 h-px bg-stone-200 dark:bg-stone-700" />
           </div>
 
-          <p className="text-center text-sm text-stone-500 dark:text-stone-400">
+          <p className="text-center text-lg text-stone-500 dark:text-stone-400">
             ليس لديك حساب؟{" "}
             <Link
               href="/auth/register"
@@ -157,7 +157,7 @@ export default function LoginPage() {
           <div className="mt-4 text-center">
             <Link
               href="/"
-              className="text-sm text-stone-400 hover:text-gold-600 transition-colors"
+              className="text-lg text-stone-400 hover:text-gold-600 transition-colors"
             >
               ← العودة للموقع
             </Link>

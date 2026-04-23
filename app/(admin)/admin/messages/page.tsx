@@ -17,7 +17,7 @@ export default async function AdminMessagesPage() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">الرسائل</h1>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">الرسائل</h1>
         <div className="flex items-center gap-3 mt-1">
           <p className="text-stone-500">إجمالي: {messages.length} رسالة</p>
           {unreadCount > 0 && (
@@ -40,7 +40,7 @@ export default async function AdminMessagesPage() {
                   </div>
                   <div>
                     <p className="font-semibold text-stone-900 dark:text-white">{msg.name}</p>
-                    <p className="text-sm font-medium text-gold-600">{msg.subject}</p>
+                    <p className="text-lg font-medium text-gold-600">{msg.subject}</p>
                     <p className="text-xs text-stone-400">{formatDate(msg.createdAt)}</p>
                   </div>
                 </div>
@@ -53,14 +53,14 @@ export default async function AdminMessagesPage() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-4">
-                <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                   <Mail className="w-4 h-4 shrink-0 text-stone-400" />
                   <a href={`mailto:${msg.email}`} className="hover:text-gold-600 transition-colors" dir="ltr">
                     {msg.email}
                   </a>
                 </div>
                 {msg.phone && (
-                  <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                  <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                     <Phone className="w-4 h-4 shrink-0 text-stone-400" />
                     <a href={`tel:${msg.phone}`} className="hover:text-gold-600 transition-colors" dir="ltr">
                       {msg.phone}
@@ -70,7 +70,7 @@ export default async function AdminMessagesPage() {
               </div>
 
               <div className="bg-stone-900 rounded-xl p-4">
-                <p className="text-stone-700 dark:text-stone-300 text-sm leading-relaxed whitespace-pre-wrap">
+                <p className="text-stone-700 dark:text-stone-300 text-lg leading-relaxed whitespace-pre-wrap">
                   {msg.message}
                 </p>
               </div>

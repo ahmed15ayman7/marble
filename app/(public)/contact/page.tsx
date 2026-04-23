@@ -89,7 +89,7 @@ export default function ContactPage() {
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
             {/* Contact Info */}
             <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold text-stone-900 dark:text-white mb-8">
+              <h2 className="text-3xl font-bold text-stone-900 dark:text-white mb-8">
                 معلومات التواصل
               </h2>
               <div className="space-y-4">
@@ -108,7 +108,7 @@ export default function ContactPage() {
                       <div>
                         <p className="font-semibold text-stone-900 dark:text-white mb-1">{info.title}</p>
                         {info.lines.map((line, li) => (
-                          <p key={li} className="text-sm text-stone-600 dark:text-stone-400">{line}</p>
+                          <p key={li} className="text-lg text-stone-600 dark:text-stone-400">{line}</p>
                         ))}
                       </div>
                     </div>
@@ -120,7 +120,7 @@ export default function ContactPage() {
             {/* Contact Form */}
             <div className="lg:col-span-2">
               <div className="bg-stone-900 rounded-3xl p-8">
-                <h2 className="text-2xl font-bold text-stone-900 dark:text-white mb-8">
+                <h2 className="text-3xl font-bold text-stone-900 dark:text-white mb-8">
                   أرسل رسالة
                 </h2>
                 <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">

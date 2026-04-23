@@ -65,7 +65,7 @@ export default function RequestMeasurementPage() {
           <div className="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="w-12 h-12 text-green-600" />
           </div>
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-white mb-4">
             تم إرسال طلبك بنجاح!
           </h2>
           <p className="text-stone-600 dark:text-stone-400 mb-8 leading-relaxed">
@@ -100,11 +100,11 @@ export default function RequestMeasurementPage() {
                 transition={{ delay: i * 0.1 }}
                 className="text-center"
               >
-                <div className="text-4xl mb-3">{step.icon}</div>
+                <div className="text-5xl mb-3">{step.icon}</div>
                 <div className="w-7 h-7 bg-gold-600 text-white rounded-full flex items-center justify-center text-xs font-bold mx-auto mb-3">
                   {i + 1}
                 </div>
-                <h3 className="font-semibold text-stone-900 dark:text-white text-sm">{step.title}</h3>
+                <h3 className="font-semibold text-stone-900 dark:text-white text-lg">{step.title}</h3>
                 <p className="text-xs text-stone-500 dark:text-stone-400 mt-1">{step.desc}</p>
               </motion.div>
             ))}
@@ -122,10 +122,10 @@ export default function RequestMeasurementPage() {
                   <Ruler className="w-6 h-6 text-gold-600" />
                 </div>
                 <div>
-                  <h2 className="text-2xl font-bold text-stone-900 dark:text-white">
+                  <h2 className="text-3xl font-bold text-stone-900 dark:text-white">
                     بيانات الطلب
                   </h2>
-                  <p className="text-sm text-stone-500">املأ النموذج وسنتواصل معك</p>
+                  <p className="text-lg text-stone-500">املأ النموذج وسنتواصل معك</p>
                 </div>
               </div>
 

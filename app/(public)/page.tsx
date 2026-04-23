@@ -33,22 +33,22 @@ export default async function HomePage() {
       <section className="py-24 bg-gradient-to-br from-gold-600 to-gold-700 relative overflow-hidden">
         <div className="absolute inset-0 opacity-10 bg-[url('/patterns/marble.svg')]" />
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-5xl font-bold text-white mb-4">
             هل تريد قياس مجاني؟
           </h2>
-          <p className="text-gold-100 text-lg mb-8 max-w-xl mx-auto">
+          <p className="text-gold-100 text-xl mb-8 max-w-xl mx-auto">
             فريقنا المتخصص يزور موقعك ويقدم لك استشارة مجانية واختيار الخامات المناسبة لمشروعك
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <a
               href="/request-measurement"
-              className="bg-stone-900 text-gold-400 font-bold px-8 py-4 rounded-xl hover:bg-stone-800 hover:text-gold-300 transition-colors text-lg shadow-xl border border-stone-800"
+              className="bg-stone-900 text-gold-400 font-bold px-8 py-4 rounded-xl hover:bg-stone-800 hover:text-gold-300 transition-colors text-xl shadow-xl border border-stone-800"
             >
               احجز قياس مجاني الآن
             </a>
             <a
               href="tel:+201000000000"
-              className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors text-lg"
+              className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white/10 transition-colors text-xl"
             >
               اتصل بنا الآن
             </a>

@@ -53,10 +53,10 @@ export default async function SuppliersPage() {
                           <h3 className="font-semibold text-stone-900 dark:text-white truncate">
                             {s.companyName}
                           </h3>
-                          <p className="text-sm text-stone-500 mt-0.5 line-clamp-2">
+                          <p className="text-lg text-stone-500 mt-0.5 line-clamp-2">
                             {s.description ?? "مورد رخام وجرانيت"}
                           </p>
-                          <div className="flex items-center gap-1 mt-2 text-sm text-stone-400">
+                          <div className="flex items-center gap-1 mt-2 text-lg text-stone-400">
                             <Package className="w-4 h-4" />
                             <span>{s._count.products} منتج</span>
                           </div>

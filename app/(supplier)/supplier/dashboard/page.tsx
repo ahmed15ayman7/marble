@@ -51,7 +51,7 @@ export default function SupplierDashboardPage() {
       className="space-y-8"
     >
       <div>
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           لوحة التحكم
         </h1>
         <p className="text-stone-500 mt-1">
@@ -62,7 +62,7 @@ export default function SupplierDashboardPage() {
       {!profile && (
         <div className="flex items-center gap-3 p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-xl">
           <AlertCircle className="w-5 h-5 text-amber-600 shrink-0" />
-          <p className="text-amber-800 dark:text-amber-200 text-sm">
+          <p className="text-amber-800 dark:text-amber-200 text-lg">
             يرجى إكمال الملف الشخصي أولاً من صفحة{" "}
             <a href="/supplier/onboarding" className="underline font-medium">
               إكمال الملف الشخصي
@@ -74,14 +74,14 @@ export default function SupplierDashboardPage() {
       <div className="grid gap-4 md:grid-cols-2">
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">المنتجات</CardTitle>
+            <CardTitle className="text-lg font-medium">المنتجات</CardTitle>
             <Package className="w-4 h-4 text-stone-500" />
           </CardHeader>
           <CardContent>
             {productsLoading ? (
               <Skeleton className="h-8 w-16" />
             ) : (
-              <p className="text-2xl font-bold">{products.length}</p>
+              <p className="text-3xl font-bold">{products.length}</p>
             )}
             <p className="text-xs text-stone-500 mt-1">إجمالي المنتجات المضافة</p>
           </CardContent>
@@ -89,11 +89,11 @@ export default function SupplierDashboardPage() {
 
         <Card>
           <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-            <CardTitle className="text-sm font-medium">حالة الموافقة</CardTitle>
+            <CardTitle className="text-lg font-medium">حالة الموافقة</CardTitle>
             <Building2 className="w-4 h-4 text-stone-500" />
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold">
+            <p className="text-3xl font-bold">
               {profile?.isApproved ? "موافق عليه" : "قيد المراجعة"}
             </p>
             <p className="text-xs text-stone-500 mt-1">

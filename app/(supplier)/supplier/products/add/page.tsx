@@ -30,7 +30,7 @@ export default function AddSupplierProductPage() {
       className="max-w-2xl"
     >
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           إضافة منتج جديد
         </h1>
         <p className="text-stone-500 mt-1">أضف منتجاً جديداً إلى قائمتك</p>

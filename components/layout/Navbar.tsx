@@ -77,7 +77,7 @@ export function Navbar() {
   /* ── helpers ─────────────────────────────────────────────── */
   const linkBase = (href: string) =>
     cn(
-      "flex items-center gap-1 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200",
+      "flex items-center gap-1 px-4 py-2 rounded-lg text-lg font-medium transition-all duration-200",
       pathname === href
         ? "text-gold-400 bg-gold-900/35"
         : isScrolled
@@ -87,7 +87,7 @@ export function Navbar() {
 
   const mobileLinkBase = (href: string) =>
     cn(
-      "block px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+      "block px-4 py-3 rounded-lg text-lg font-medium transition-colors",
       pathname === href
         ? "text-gold-400 bg-gold-900/35"
         : "text-stone-300 hover:bg-stone-900"
@@ -110,7 +110,7 @@ export function Navbar() {
             <Diamond className="w-6 h-6 text-white" />
           </div>
           <div className="flex flex-col">
-            <span className={cn("font-bold text-lg leading-tight transition-colors",
+            <span className={cn("font-bold text-xl leading-tight transition-colors",
               isScrolled ? "text-stone-100" : "text-white")}>
               الوادي للرخام
             </span>
@@ -146,7 +146,7 @@ export function Navbar() {
                     <Link
                       key={child.href}
                       href={child.href}
-                      className="block px-4 py-2.5 text-sm text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
+                      className="block px-4 py-2.5 text-lg text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
                     >
                       {child.label}
                     </Link>
@@ -162,7 +162,7 @@ export function Navbar() {
           {/* Phone */}
           <a
             href="tel:+201000000000"
-            className={cn("flex items-center gap-2 text-sm font-medium transition-colors",
+            className={cn("flex items-center gap-2 text-lg font-medium transition-colors",
               isScrolled ? "text-stone-300" : "text-white/90")}
           >
             <Phone className="w-4 h-4" />
@@ -178,7 +178,7 @@ export function Navbar() {
               <button
                 onClick={() => setUserMenu(!userMenu)}
                 className={cn(
-                  "flex items-center gap-2 px-3 py-1.5 rounded-xl text-sm font-medium transition-all",
+                  "flex items-center gap-2 px-3 py-1.5 rounded-xl text-lg font-medium transition-all",
                   isScrolled
                     ? "text-stone-200 hover:bg-stone-900"
                     : "text-white hover:bg-white/10"
@@ -202,7 +202,7 @@ export function Navbar() {
                   >
                     {/* User info */}
                     <div className="px-4 py-3 border-b border-stone-800">
-                      <p className="text-sm font-semibold text-stone-100 truncate">
+                      <p className="text-lg font-semibold text-stone-100 truncate">
                         {session.user?.name}
                       </p>
                       <p className="text-xs text-stone-400 truncate">{session.user?.email}</p>
@@ -212,7 +212,7 @@ export function Navbar() {
                       <Link
                         href={dashboardHref}
                         onClick={() => setUserMenu(false)}
-                        className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
+                        className="flex items-center gap-3 px-4 py-2.5 text-lg text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
                       >
                         <LayoutDashboard className="w-4 h-4" />
                         {role === "ADMIN" ? "لوحة الإدارة" : role === "SUPPLIER" ? "لوحة المورد" : "لوحتي"}
@@ -222,7 +222,7 @@ export function Navbar() {
                         <Link
                           href={profileHref}
                           onClick={() => setUserMenu(false)}
-                          className="flex items-center gap-3 px-4 py-2.5 text-sm text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
+                          className="flex items-center gap-3 px-4 py-2.5 text-lg text-stone-300 hover:bg-gold-900/25 hover:text-gold-400 transition-colors"
                         >
                           <User className="w-4 h-4" />
                           ملفي الشخصي
@@ -233,7 +233,7 @@ export function Navbar() {
                     <div className="border-t border-stone-800 pt-1">
                       <button
                         onClick={() => { setUserMenu(false); signOut({ callbackUrl: "/" }); }}
-                        className="w-full flex items-center gap-3 px-4 py-2.5 text-sm text-red-400 hover:bg-red-950/40 transition-colors"
+                        className="w-full flex items-center gap-3 px-4 py-2.5 text-lg text-red-400 hover:bg-red-950/40 transition-colors"
                       >
                         <LogOut className="w-4 h-4" />
                         تسجيل الخروج
@@ -310,7 +310,7 @@ export function Navbar() {
                         <Link
                           key={child.href}
                           href={child.href}
-                          className="block px-3 py-2 text-sm text-stone-400 hover:text-gold-400 transition-colors"
+                          className="block px-3 py-2 text-lg text-stone-400 hover:text-gold-400 transition-colors"
                         >
                           {child.label}
                         </Link>
@@ -330,7 +330,7 @@ export function Navbar() {
                         {session.user?.name?.charAt(0)?.toUpperCase() ?? "U"}
                       </div>
                       <div className="min-w-0">
-                        <p className="text-sm font-semibold text-stone-100 truncate">
+                        <p className="text-lg font-semibold text-stone-100 truncate">
                           {session.user?.name}
                         </p>
                         <p className="text-xs text-stone-400 truncate">{session.user?.email}</p>

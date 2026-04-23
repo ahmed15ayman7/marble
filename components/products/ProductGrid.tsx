@@ -36,7 +36,7 @@ export function ProductGrid({ products, isLoading }: ProductGridProps) {
     return (
       <div className="flex flex-col items-center justify-center py-20 text-center">
         <div className="text-6xl mb-4">🔍</div>
-        <h3 className="text-xl font-semibold text-stone-900 dark:text-white mb-2">
+        <h3 className="text-2xl font-semibold text-stone-900 dark:text-white mb-2">
           لا توجد منتجات
         </h3>
         <p className="text-stone-500 dark:text-stone-400">

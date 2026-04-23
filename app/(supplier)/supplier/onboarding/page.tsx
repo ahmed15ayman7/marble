@@ -54,7 +54,7 @@ export default function SupplierOnboardingPage() {
       className="max-w-2xl mx-auto"
     >
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           إكمال الملف الشخصي للمورد
         </h1>
         <p className="text-stone-500 mt-1">

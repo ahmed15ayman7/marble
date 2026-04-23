@@ -24,7 +24,7 @@ export function PageLoader() {
     <div className="min-h-[400px] flex items-center justify-center">
       <div className="flex flex-col items-center gap-4">
         <LoadingSpinner size="lg" />
-        <p className="text-stone-500 text-sm">جاري التحميل...</p>
+        <p className="text-stone-500 text-lg">جاري التحميل...</p>
       </div>
     </div>
   );

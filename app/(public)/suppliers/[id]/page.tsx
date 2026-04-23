@@ -68,13 +68,13 @@ export default async function SupplierDetailPage({ params }: Props) {
                   معلومات المورد
                 </h3>
                 {supplier.address && (
-                  <div className="flex items-start gap-2 text-sm text-stone-600 dark:text-stone-400 mb-3">
+                  <div className="flex items-start gap-2 text-lg text-stone-600 dark:text-stone-400 mb-3">
                     <MapPin className="w-4 h-4 shrink-0 mt-0.5" />
                     <span>{supplier.address}</span>
                   </div>
                 )}
                 {supplier.phone && (
-                  <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400 mb-3">
+                  <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400 mb-3">
                     <Phone className="w-4 h-4 shrink-0" />
                     <a href={`tel:${supplier.phone}`} dir="ltr">
                       {supplier.phone}
@@ -85,7 +85,7 @@ export default async function SupplierDetailPage({ params }: Props) {
             </div>
 
             <div className="lg:col-span-3">
-              <h2 className="text-xl font-bold text-stone-900 dark:text-white mb-6">
+              <h2 className="text-2xl font-bold text-stone-900 dark:text-white mb-6">
                 منتجات المورد ({supplier.products.length})
               </h2>
               {supplier.products.length === 0 ? (
@@ -112,7 +112,7 @@ export default async function SupplierDetailPage({ params }: Props) {
                           <h3 className="font-semibold text-stone-900 dark:text-white">
                             {p.name}
                           </h3>
-                          <p className="text-sm text-stone-500 mt-1">
+                          <p className="text-lg text-stone-500 mt-1">
                             {p.category === "MARBLE" ? "رخام" : "جرانيت"}
                           </p>
                           {p.price != null && (

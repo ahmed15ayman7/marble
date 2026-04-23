@@ -95,11 +95,11 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             {/* Products */}
             <div className="lg:col-span-3">
               <div className="flex items-center justify-between mb-6">
-                <p className="text-stone-600 dark:text-stone-400 text-sm">
+                <p className="text-stone-600 dark:text-stone-400 text-lg">
                   إجمالي النتائج: <span className="font-semibold text-stone-900 dark:text-white">{total}</span> منتج
                 </p>
                 {totalPages > 1 && (
-                  <p className="text-stone-500 text-sm">
+                  <p className="text-stone-500 text-lg">
                     صفحة {page} من {totalPages}
                   </p>
                 )}
@@ -114,7 +114,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     <a
                       key={p}
                       href={`/products?${new URLSearchParams({ ...searchParams, page: p.toString() })}`}
-                      className={`w-10 h-10 flex items-center justify-center rounded-lg text-sm font-medium transition-colors ${
+                      className={`w-10 h-10 flex items-center justify-center rounded-lg text-lg font-medium transition-colors ${
                         p === page
                           ? "bg-gold-600 text-white"
                           : "bg-stone-100 dark:bg-stone-800 text-stone-700 dark:text-stone-300 hover:bg-gold-100"

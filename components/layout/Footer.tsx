@@ -15,11 +15,11 @@ export function Footer() {
                 <Diamond className="w-6 h-6 text-white" />
               </div>
               <div>
-                <p className="font-bold text-white text-lg leading-none">الوادي للرخام</p>
+                <p className="font-bold text-white text-xl leading-none">الوادي للرخام</p>
                 <p className="text-gold-400 text-xs">والجرانيت</p>
               </div>
             </div>
-            <p className="text-sm leading-relaxed text-stone-400">
+            <p className="text-lg leading-relaxed text-stone-400">
               شركة رائدة في مجال الرخام والجرانيت المصري والمستورد. نقدم أجود الخامات للتوريد والتركيب للمشاريع السكنية والتجارية.
             </p>
             <div className="flex items-center gap-3 mt-6">
@@ -37,7 +37,7 @@ export function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">روابط سريعة</h3>
+            <h3 className="text-white font-semibold mb-5 text-lg uppercase tracking-wider">روابط سريعة</h3>
             <ul className="space-y-3">
               {[
                 { href: "/", label: "الرئيسية" },
@@ -50,7 +50,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-stone-400 hover:text-gold-400 transition-colors flex items-center gap-2"
+                    className="text-lg text-stone-400 hover:text-gold-400 transition-colors flex items-center gap-2"
                   >
                     <span className="w-1.5 h-1.5 bg-gold-700 rounded-full" />
                     {link.label}
@@ -62,7 +62,7 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">منتجاتنا</h3>
+            <h3 className="text-white font-semibold mb-5 text-lg uppercase tracking-wider">منتجاتنا</h3>
             <ul className="space-y-3">
               {[
                 { href: "/products?type=MARBLE&origin=EGYPTIAN", label: "الرخام المصري" },
@@ -74,7 +74,7 @@ export function Footer() {
                 <li key={link.href}>
                   <Link
                     href={link.href}
-                    className="text-sm text-stone-400 hover:text-gold-400 transition-colors flex items-center gap-2"
+                    className="text-lg text-stone-400 hover:text-gold-400 transition-colors flex items-center gap-2"
                   >
                     <span className="w-1.5 h-1.5 bg-gold-700 rounded-full" />
                     {link.label}
@@ -86,22 +86,22 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h3 className="text-white font-semibold mb-5 text-sm uppercase tracking-wider">تواصل معنا</h3>
+            <h3 className="text-white font-semibold mb-5 text-lg uppercase tracking-wider">تواصل معنا</h3>
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <Phone className="w-4 h-4 text-gold-700 mt-0.5 shrink-0" />
                 <div>
-                  <p className="text-sm text-stone-300" dir="ltr">+20 100 000 0000</p>
-                  <p className="text-sm text-stone-300" dir="ltr">+20 110 000 0000</p>
+                  <p className="text-lg text-stone-300" dir="ltr">+20 100 000 0000</p>
+                  <p className="text-lg text-stone-300" dir="ltr">+20 110 000 0000</p>
                 </div>
               </li>
               <li className="flex items-start gap-3">
                 <Mail className="w-4 h-4 text-gold-700 mt-0.5 shrink-0" />
-                <p className="text-sm text-stone-300" dir="ltr">info@marble.com</p>
+                <p className="text-lg text-stone-300" dir="ltr">info@marble.com</p>
               </li>
               <li className="flex items-start gap-3">
                 <MapPin className="w-4 h-4 text-gold-700 mt-0.5 shrink-0" />
-                <p className="text-sm text-stone-400">
+                <p className="text-lg text-stone-400">
                   شارع الصناعة، المنطقة الصناعية<br />
                   القاهرة، مصر
                 </p>
@@ -114,10 +114,10 @@ export function Footer() {
       <Separator className="bg-stone-800" />
 
       <div className="container mx-auto px-4 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-stone-500">
+        <p className="text-lg text-stone-500">
           © {new Date().getFullYear()} الوادي للرخام والجرانيت. جميع الحقوق محفوظة.
         </p>
-        <div className="flex items-center gap-4 text-sm text-stone-500">
+        <div className="flex items-center gap-4 text-lg text-stone-500">
           <Link href="#" className="hover:text-gold-400 transition-colors">سياسة الخصوصية</Link>
           <Link href="#" className="hover:text-gold-400 transition-colors">شروط الاستخدام</Link>
         </div>

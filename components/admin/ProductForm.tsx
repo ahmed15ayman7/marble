@@ -263,7 +263,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   defaultChecked={product?.isFeatured}
                   {...register("isFeatured")}
                 />
-                <span className="text-sm font-medium text-stone-900 dark:text-white">
+                <span className="text-lg font-medium text-stone-900 dark:text-white">
                   منتج مميز
                 </span>
               </label>
@@ -274,7 +274,7 @@ export function ProductForm({ product, categories }: ProductFormProps) {
                   defaultChecked={product?.isAvailable ?? true}
                   {...register("isAvailable")}
                 />
-                <span className="text-sm font-medium text-stone-900 dark:text-white">
+                <span className="text-lg font-medium text-stone-900 dark:text-white">
                   متاح للبيع
                 </span>
               </label>

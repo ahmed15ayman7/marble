@@ -42,7 +42,7 @@ export function PageHeader({ title, subtitle, description, className, center = t
             )}
           >
             <span className="w-2 h-2 bg-gold-400 rounded-full animate-pulse" />
-            <span className="text-gold-400 text-sm font-medium">{subtitle}</span>
+            <span className="text-gold-400 text-lg font-medium">{subtitle}</span>
           </motion.div>
         )}
 
@@ -50,7 +50,7 @@ export function PageHeader({ title, subtitle, description, className, center = t
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
+          className="text-5xl md:text-5xl lg:text-6xl font-bold text-white leading-tight mb-4"
         >
           {title}
         </motion.h1>
@@ -61,7 +61,7 @@ export function PageHeader({ title, subtitle, description, className, center = t
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className={cn(
-              "text-stone-300 text-lg max-w-2xl leading-relaxed",
+              "text-stone-300 text-xl max-w-2xl leading-relaxed",
               center && "mx-auto",
             )}
           >

@@ -72,7 +72,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       {/* Breadcrumb */}
       <div className="bg-stone-950/50 py-4">
         <div className="container mx-auto px-4">
-          <div className="flex items-center gap-2 text-sm text-stone-500">
+          <div className="flex items-center gap-2 text-lg text-stone-500">
             <Link href="/" className="hover:text-gold-600 transition-colors">الرئيسية</Link>
             <ChevronLeft className="w-4 h-4" />
             <Link href="/products" className="hover:text-gold-600 transition-colors">المنتجات</Link>
@@ -102,7 +102,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                   <div className="w-full h-full flex items-center justify-center">
                     <div className="text-center text-stone-400">
                       <div className="text-8xl mb-4">🪨</div>
-                      <p className="text-xl font-medium">{product.nameAr}</p>
+                      <p className="text-2xl font-medium">{product.nameAr}</p>
                     </div>
                   </div>
                 )}
@@ -137,17 +137,17 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 )}
               </div>
 
-              <h1 className="text-4xl font-bold text-stone-900 dark:text-white mb-2">
+              <h1 className="text-5xl font-bold text-stone-900 dark:text-white mb-2">
                 {product.nameAr}
               </h1>
-              <p className="text-stone-500 dark:text-stone-400 text-sm mb-6">
+              <p className="text-stone-500 dark:text-stone-400 text-lg mb-6">
                 {product.name} | التصنيف: {product.category?.nameAr}
               </p>
 
               {product.price && (
                 <div className="bg-gold-50 dark:bg-gold-900/10 rounded-2xl p-5 mb-6">
-                  <p className="text-sm text-stone-500 mb-1">السعر التقريبي</p>
-                  <p className="text-3xl font-bold text-gold-600">
+                  <p className="text-lg text-stone-500 mb-1">السعر التقريبي</p>
+                  <p className="text-4xl font-bold text-gold-600">
                     {formatPrice(product.price, product.priceUnit ?? "م²")}
                   </p>
                   <p className="text-xs text-stone-400 mt-1">* الأسعار قابلة للتغيير، اتصل للسعر النهائي</p>
@@ -172,7 +172,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
                 ].map((spec, i) => (
                   <div key={i} className="bg-stone-900 rounded-xl p-3">
                     <p className="text-xs text-stone-400 mb-0.5">{spec.label}</p>
-                    <p className="font-semibold text-stone-900 dark:text-white text-sm">{spec.value}</p>
+                    <p className="font-semibold text-stone-900 dark:text-white text-lg">{spec.value}</p>
                   </div>
                 ))}
               </div>
@@ -201,7 +201,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         <section className="py-12 bg-stone-950/50">
           <div className="container mx-auto px-4">
             <div className="flex items-center justify-between mb-8">
-              <h2 className="text-2xl font-bold text-stone-900 dark:text-white">منتجات مشابهة</h2>
+              <h2 className="text-3xl font-bold text-stone-900 dark:text-white">منتجات مشابهة</h2>
               <Button asChild variant="ghost" className="text-gold-600">
                 <Link href={`/products?type=${product.type}&origin=${product.origin}`}>
                   عرض الكل
@@ -225,13 +225,13 @@ export default async function ProductPage({ params }: ProductPageProps) {
                         className="object-cover group-hover:scale-105 transition-transform"
                       />
                     ) : (
-                      <div className="w-full h-full flex items-center justify-center text-3xl">🪨</div>
+                      <div className="w-full h-full flex items-center justify-center text-4xl">🪨</div>
                     )}
                   </div>
                   <div className="p-4">
                     <p className="font-semibold text-stone-900 dark:text-white">{related.nameAr}</p>
                     {related.price && (
-                      <p className="text-gold-600 text-sm mt-1">{formatPrice(related.price, related.priceUnit ?? "م²")}</p>
+                      <p className="text-gold-600 text-lg mt-1">{formatPrice(related.price, related.priceUnit ?? "م²")}</p>
                     )}
                   </div>
                 </Link>

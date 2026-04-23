@@ -20,7 +20,7 @@ export default async function AdminProductsPage() {
     <div>
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-stone-900 dark:text-white">المنتجات</h1>
+          <h1 className="text-3xl font-bold text-stone-900 dark:text-white">المنتجات</h1>
           <p className="text-stone-500 dark:text-stone-400 mt-1">
             إجمالي: {products.length} منتج
           </p>
@@ -55,11 +55,11 @@ export default async function AdminProductsPage() {
                   <tr key={product.id} className="hover:bg-stone-50 dark:hover:bg-stone-800/30 transition-colors">
                     <td className="px-4 py-4">
                       <div className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-stone-100 dark:bg-stone-700 rounded-lg flex items-center justify-center text-lg shrink-0">
+                        <div className="w-10 h-10 bg-stone-100 dark:bg-stone-700 rounded-lg flex items-center justify-center text-xl shrink-0">
                           🪨
                         </div>
                         <div>
-                          <p className="font-medium text-stone-900 dark:text-white text-sm">{product.nameAr}</p>
+                          <p className="font-medium text-stone-900 dark:text-white text-lg">{product.nameAr}</p>
                           <p className="text-xs text-stone-400">{product.name}</p>
                         </div>
                       </div>
@@ -73,11 +73,11 @@ export default async function AdminProductsPage() {
                       </div>
                     </td>
                     <td className="px-4 py-4">
-                      <p className="text-sm text-stone-700 dark:text-stone-300">{product.category?.nameAr}</p>
+                      <p className="text-lg text-stone-700 dark:text-stone-300">{product.category?.nameAr}</p>
                     </td>
                     <td className="px-4 py-4">
                       {product.price ? (
-                        <p className="text-sm font-medium text-gold-600">
+                        <p className="text-lg font-medium text-gold-600">
                           {formatPrice(product.price, product.priceUnit ?? "م²")}
                         </p>
                       ) : (

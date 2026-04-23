@@ -39,7 +39,7 @@ export default async function RequestsPage({
     <div>
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h1 className="text-2xl font-bold text-stone-900 dark:text-white">طلباتي</h1>
+          <h1 className="text-3xl font-bold text-stone-900 dark:text-white">طلباتي</h1>
           <p className="text-stone-500 dark:text-stone-400 mt-1">تابع جميع طلباتك ورسائلك</p>
         </div>
         <Button asChild variant="gold" size="sm">
@@ -92,7 +92,7 @@ export default async function RequestsPage({
                       </span>
                     </div>
 
-                    <div className="space-y-2 text-sm">
+                    <div className="space-y-2 text-lg">
                       <InfoRow icon={MapPin}   text={`${req.city} — ${req.address}`} />
                       <InfoRow icon={Phone}    text={req.customerPhone} dir="ltr" />
                       {req.preferredDate && (
@@ -136,7 +136,7 @@ export default async function RequestsPage({
                       </span>
                     </div>
 
-                    <div className="space-y-2 text-sm">
+                    <div className="space-y-2 text-lg">
                       <InfoRow icon={MapPin}  text={req.address} />
                       <InfoRow icon={Phone}   text={req.customerPhone} dir="ltr" />
                     </div>
@@ -181,13 +181,13 @@ export default async function RequestsPage({
                       </span>
                     </div>
 
-                    <div className="space-y-1.5 text-sm mb-3">
+                    <div className="space-y-1.5 text-lg mb-3">
                       <InfoRow icon={Mail}  text={msg.email}  dir="ltr" />
                       {msg.phone && <InfoRow icon={Phone} text={msg.phone} dir="ltr" />}
                     </div>
 
                     <div className="bg-stone-900 rounded-xl p-4">
-                      <p className="text-sm text-stone-700 dark:text-stone-300 leading-relaxed">
+                      <p className="text-lg text-stone-700 dark:text-stone-300 leading-relaxed">
                         {msg.message}
                       </p>
                     </div>

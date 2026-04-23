@@ -16,7 +16,7 @@ export default async function EditProductPage({ params }: { params: { id: string
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           تعديل: {product.nameAr}
         </h1>
         <p className="text-stone-500 mt-1">تعديل بيانات المنتج</p>

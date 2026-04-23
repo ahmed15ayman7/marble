@@ -98,7 +98,7 @@ export default async function AdminDashboard() {
     <div>
       {/* Header */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           أهلاً، {session?.user?.name ?? "مدير النظام"} 👋
         </h1>
         <p className="text-stone-500 dark:text-stone-400 mt-1">
@@ -113,8 +113,8 @@ export default async function AdminDashboard() {
             <CardContent className="pt-6">
               <div className="flex items-start justify-between">
                 <div>
-                  <p className="text-sm text-stone-500 dark:text-stone-400 mb-1">{card.title}</p>
-                  <p className="text-3xl font-bold text-stone-900 dark:text-white">{card.value}</p>
+                  <p className="text-lg text-stone-500 dark:text-stone-400 mb-1">{card.title}</p>
+                  <p className="text-4xl font-bold text-stone-900 dark:text-white">{card.value}</p>
                   {card.badge && (
                     <Badge variant="warning" className="mt-2 text-xs">{card.badge}</Badge>
                   )}
@@ -140,7 +140,7 @@ export default async function AdminDashboard() {
           </CardHeader>
           <CardContent>
             {stats.recentMessages.length === 0 ? (
-              <p className="text-sm text-stone-400 text-center py-6">لا توجد رسائل بعد</p>
+              <p className="text-lg text-stone-400 text-center py-6">لا توجد رسائل بعد</p>
             ) : (
               <div className="space-y-3">
                 {stats.recentMessages.map((msg) => (
@@ -150,7 +150,7 @@ export default async function AdminDashboard() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-2">
-                        <p className="font-medium text-sm text-stone-900 dark:text-white truncate">
+                        <p className="font-medium text-lg text-stone-900 dark:text-white truncate">
                           {msg.name}
                         </p>
                         {!msg.isRead && (
@@ -180,7 +180,7 @@ export default async function AdminDashboard() {
           </CardHeader>
           <CardContent>
             {stats.recentMeasurements.length === 0 ? (
-              <p className="text-sm text-stone-400 text-center py-6">لا توجد طلبات بعد</p>
+              <p className="text-lg text-stone-400 text-center py-6">لا توجد طلبات بعد</p>
             ) : (
               <div className="space-y-3">
                 {stats.recentMeasurements.map((req) => (
@@ -190,7 +190,7 @@ export default async function AdminDashboard() {
                     </div>
                     <div className="min-w-0 flex-1">
                       <div className="flex items-center justify-between gap-2">
-                        <p className="font-medium text-sm text-stone-900 dark:text-white truncate">
+                        <p className="font-medium text-lg text-stone-900 dark:text-white truncate">
                           {req.customerName}
                         </p>
                         <span className={`text-xs px-2 py-0.5 rounded-full ${getStatusColor(req.status)}`}>

@@ -45,7 +45,7 @@ export default function AdminFeedbackPage() {
       className="space-y-6"
     >
       <div>
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           التقييمات
         </h1>
         <p className="text-stone-500 mt-1">تقييمات العملاء</p>
@@ -92,11 +92,11 @@ export default function AdminFeedbackPage() {
                           }`}
                         />
                       ))}
-                      <span className="mr-1 text-sm">({f.rating})</span>
+                      <span className="mr-1 text-lg">({f.rating})</span>
                     </div>
                   </TableCell>
                   <TableCell className="max-w-xs truncate">{f.message}</TableCell>
-                  <TableCell className="text-sm text-stone-500">
+                  <TableCell className="text-lg text-stone-500">
                     {formatDate(f.createdAt)}
                   </TableCell>
                 </TableRow>
@@ -111,7 +111,7 @@ export default function AdminFeedbackPage() {
               <button
                 key={p}
                 onClick={() => setPage(p)}
-                className={`px-3 py-1 rounded-lg text-sm ${
+                className={`px-3 py-1 rounded-lg text-lg ${
                   p === page
                     ? "bg-gold-600 text-white"
                     : "bg-stone-100 dark:bg-stone-800 hover:bg-stone-200"

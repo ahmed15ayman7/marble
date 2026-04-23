@@ -16,7 +16,7 @@ export default function CustomerProfilePage() {
       className="max-w-xl"
     >
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           الملف الشخصي
         </h1>
         <p className="text-stone-500 mt-1">معلومات حسابك</p>
@@ -30,14 +30,14 @@ export default function CustomerProfilePage() {
           <div className="flex items-center gap-3">
             <User className="w-5 h-5 text-stone-400" />
             <div>
-              <p className="text-sm text-stone-500">الاسم</p>
+              <p className="text-lg text-stone-500">الاسم</p>
               <p className="font-medium">{session?.user?.name ?? "-"}</p>
             </div>
           </div>
           <div className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-stone-400" />
             <div>
-              <p className="text-sm text-stone-500">البريد الإلكتروني</p>
+              <p className="text-lg text-stone-500">البريد الإلكتروني</p>
               <p className="font-medium" dir="ltr">
                 {session?.user?.email ?? "-"}
               </p>

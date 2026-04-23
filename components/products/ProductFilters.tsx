@@ -90,7 +90,7 @@ export function ProductFilters() {
               key={filter.value}
               onClick={() => updateFilter("type", filter.value)}
               className={cn(
-                "w-full text-right px-4 py-2.5 rounded-lg text-sm font-medium transition-all",
+                "w-full text-right px-4 py-2.5 rounded-lg text-lg font-medium transition-all",
                 currentType === filter.value
                   ? "bg-gold-600 text-white shadow-sm"
                   : "bg-stone-50 dark:bg-stone-700 text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700"
@@ -113,7 +113,7 @@ export function ProductFilters() {
               key={filter.value}
               onClick={() => updateFilter("origin", filter.value)}
               className={cn(
-                "w-full text-right px-4 py-2.5 rounded-lg text-sm font-medium transition-all",
+                "w-full text-right px-4 py-2.5 rounded-lg text-lg font-medium transition-all",
                 currentOrigin === filter.value
                   ? "bg-gold-600 text-white shadow-sm"
                   : "bg-stone-50 dark:bg-stone-700 text-stone-700 dark:text-stone-200 hover:bg-gold-50 dark:hover:bg-gold-900/20 hover:text-gold-700"

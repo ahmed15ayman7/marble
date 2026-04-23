@@ -88,7 +88,7 @@ export default function AdminSupplierProductsPage() {
       className="space-y-6"
     >
       <div>
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">
           منتجات الموردين
         </h1>
         <p className="text-stone-500 mt-1">عرض وحذف منتجات الموردين</p>
@@ -105,7 +105,7 @@ export default function AdminSupplierProductsPage() {
           />
         </div>
         <select
-          className="rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-950 px-4 py-2 text-sm"
+          className="rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-950 px-4 py-2 text-lg"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
         >
@@ -139,7 +139,7 @@ export default function AdminSupplierProductsPage() {
                 <TableRow key={p.id}>
                   <TableCell className="font-medium">{p.name}</TableCell>
                   <TableCell>
-                    <span className="text-sm">{p.supplier?.user?.email ?? "-"}</span>
+                    <span className="text-lg">{p.supplier?.user?.email ?? "-"}</span>
                   </TableCell>
                   <TableCell>{getCategoryLabel(p.category)}</TableCell>
                   <TableCell>

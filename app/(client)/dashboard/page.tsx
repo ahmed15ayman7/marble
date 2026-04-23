@@ -69,7 +69,7 @@ export default async function DashboardPage() {
     <div>
       {/* Welcome */}
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">لوحتي</h1>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">لوحتي</h1>
         <p className="text-stone-500 dark:text-stone-400 mt-1">
           مرحباً بك! هنا يمكنك متابعة جميع طلباتك ورسائلك
         </p>
@@ -86,7 +86,7 @@ export default async function DashboardPage() {
                     <card.icon className={`w-5 h-5 ${card.color}`} />
                   </div>
                 </div>
-                <p className="text-2xl font-bold text-stone-900 dark:text-white">{card.value}</p>
+                <p className="text-3xl font-bold text-stone-900 dark:text-white">{card.value}</p>
                 <p className="text-xs text-stone-500 dark:text-stone-400 mt-0.5">{card.label}</p>
               </CardContent>
             </Card>
@@ -98,16 +98,16 @@ export default async function DashboardPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
         <div className="bg-gradient-to-br from-gold-700 to-gold-700 rounded-2xl p-6 text-white">
           <Ruler className="w-8 h-8 mb-3 opacity-80" />
-          <h3 className="font-bold text-lg mb-1">طلب قياس مجاني</h3>
-          <p className="text-gold-100 text-sm mb-4">فريقنا يزورك ويقيس بالدقة</p>
+          <h3 className="font-bold text-xl mb-1">طلب قياس مجاني</h3>
+          <p className="text-gold-100 text-lg mb-4">فريقنا يزورك ويقيس بالدقة</p>
           <Button asChild size="sm" className="bg-stone-900 text-gold-400 hover:bg-stone-800 hover:text-gold-300">
             <Link href="/request-measurement">احجز الآن</Link>
           </Button>
         </div>
         <div className="bg-gradient-to-br from-stone-700 to-stone-900 rounded-2xl p-6 text-white">
           <MessageSquare className="w-8 h-8 mb-3 opacity-80" />
-          <h3 className="font-bold text-lg mb-1">تواصل معنا</h3>
-          <p className="text-stone-300 text-sm mb-4">لديك سؤال أو استفسار؟</p>
+          <h3 className="font-bold text-xl mb-1">تواصل معنا</h3>
+          <p className="text-stone-300 text-lg mb-4">لديك سؤال أو استفسار؟</p>
           <Button asChild size="sm" className="bg-stone-900 text-stone-200 hover:bg-stone-800">
             <Link href="/contact">اتصل بنا</Link>
           </Button>
@@ -138,7 +138,7 @@ export default async function DashboardPage() {
                       </div>
                       <div className="min-w-0 flex-1">
                         <div className="flex items-center justify-between gap-2">
-                          <p className="text-sm font-medium text-stone-900 dark:text-white truncate">{req.city}</p>
+                          <p className="text-lg font-medium text-stone-900 dark:text-white truncate">{req.city}</p>
                           <span className={`text-xs px-2 py-0.5 rounded-full font-medium shrink-0 ${getStatusColor(req.status)}`}>
                             {getStatusLabel(req.status)}
                           </span>
@@ -172,7 +172,7 @@ export default async function DashboardPage() {
                       <MessageSquare className="w-4 h-4 text-purple-600" />
                     </div>
                     <div className="min-w-0 flex-1">
-                      <p className="text-sm font-medium text-stone-900 dark:text-white truncate">{msg.subject}</p>
+                      <p className="text-lg font-medium text-stone-900 dark:text-white truncate">{msg.subject}</p>
                       <p className="text-xs text-stone-400 mt-0.5">{formatDate(msg.createdAt)}</p>
                     </div>
                   </div>
@@ -194,7 +194,7 @@ function EmptyState({
   return (
     <div className="flex flex-col items-center justify-center py-8 text-center">
       <Icon className="w-10 h-10 text-stone-200 dark:text-stone-700 mb-3" />
-      <p className="text-sm text-stone-400 mb-3">{text}</p>
+      <p className="text-lg text-stone-400 mb-3">{text}</p>
       <Button asChild variant="gold" size="sm">
         <Link href={href}>{cta}</Link>
       </Button>

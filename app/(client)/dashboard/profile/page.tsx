@@ -85,7 +85,7 @@ export default function ProfilePage() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">ملفي الشخصي</h1>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">ملفي الشخصي</h1>
         <p className="text-stone-500 dark:text-stone-400 mt-1">إدارة بياناتك الشخصية وكلمة المرور</p>
       </div>
 
@@ -94,13 +94,13 @@ export default function ProfilePage() {
         <div className="lg:col-span-1">
           <Card className="border-stone-100 dark:border-stone-800">
             <CardContent className="pt-6 flex flex-col items-center text-center">
-              <div className="w-24 h-24 bg-gradient-to-br from-gold-400 to-gold-700 rounded-full flex items-center justify-center text-white text-4xl font-bold mb-4 shadow-lg">
+              <div className="w-24 h-24 bg-gradient-to-br from-gold-400 to-gold-700 rounded-full flex items-center justify-center text-white text-5xl font-bold mb-4 shadow-lg">
                 {session?.user?.name?.charAt(0)?.toUpperCase() ?? "U"}
               </div>
-              <p className="font-bold text-stone-900 dark:text-white text-lg">
+              <p className="font-bold text-stone-900 dark:text-white text-xl">
                 {session?.user?.name}
               </p>
-              <p className="text-stone-500 text-sm mt-1 mb-3">{session?.user?.email}</p>
+              <p className="text-stone-500 text-lg mt-1 mb-3">{session?.user?.email}</p>
               <Badge variant="gold" className="text-xs">عميل</Badge>
             </CardContent>
           </Card>

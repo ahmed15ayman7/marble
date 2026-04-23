@@ -115,10 +115,10 @@ export default function ServicesPage() {
                   <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-6 shadow-lg`}>
                     <service.icon className="w-8 h-8 text-white" />
                   </div>
-                  <h2 className="text-3xl font-bold text-stone-900 dark:text-white mb-4">
+                  <h2 className="text-4xl font-bold text-stone-900 dark:text-white mb-4">
                     {service.title}
                   </h2>
-                  <p className="text-stone-600 dark:text-stone-400 text-lg leading-relaxed mb-6">
+                  <p className="text-stone-600 dark:text-stone-400 text-xl leading-relaxed mb-6">
                     {service.description}
                   </p>
                   <Button asChild variant="gold" size="lg">
@@ -129,7 +129,7 @@ export default function ServicesPage() {
                   </Button>
                 </div>
                 <div className={`${service.bgColor} rounded-3xl p-8 ${i % 2 === 1 ? "lg:order-1" : ""}`}>
-                  <h3 className="font-bold text-stone-900 dark:text-white mb-5 text-lg">مميزات الخدمة</h3>
+                  <h3 className="font-bold text-stone-900 dark:text-white mb-5 text-xl">مميزات الخدمة</h3>
                   <ul className="space-y-3">
                     {service.features.map((feature, fi) => (
                       <li key={fi} className="flex items-center gap-3">
@@ -148,7 +148,7 @@ export default function ServicesPage() {
       {/* CTA */}
       <section className="py-16 bg-stone-950/50">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-stone-900 dark:text-white mb-4">
+          <h2 className="text-4xl font-bold text-stone-900 dark:text-white mb-4">
             جاهز للبدء؟
           </h2>
           <p className="text-stone-500 dark:text-stone-400 mb-8 max-w-xl mx-auto">

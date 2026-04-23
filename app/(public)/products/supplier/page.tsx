@@ -70,7 +70,7 @@ export default function SupplierProductsPage() {
               />
             </div>
             <select
-              className="rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-950 px-4 py-2 text-sm"
+              className="rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-950 px-4 py-2 text-lg"
               value={category}
               onChange={(e) => {
                 setCategory(e.target.value);
@@ -102,7 +102,7 @@ export default function SupplierProductsPage() {
             </div>
           ) : (
             <>
-              <p className="text-sm text-stone-500 mb-6">
+              <p className="text-lg text-stone-500 mb-6">
                 إجمالي النتائج: <span className="font-semibold">{total}</span> منتج
               </p>
               <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
@@ -135,7 +135,7 @@ export default function SupplierProductsPage() {
                           <h3 className="font-semibold text-stone-900 dark:text-white mt-1">
                             {p.name}
                           </h3>
-                          <p className="text-sm text-stone-500 mt-0.5">
+                          <p className="text-lg text-stone-500 mt-0.5">
                             {getCategoryLabel(p.category)}
                           </p>
                           {p.price != null && (

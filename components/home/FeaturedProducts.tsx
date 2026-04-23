@@ -24,7 +24,7 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
-              className="text-gold-600 font-medium text-sm uppercase tracking-widest mb-2"
+              className="text-gold-600 font-medium text-lg uppercase tracking-widest mb-2"
             >
               منتجاتنا المميزة
             </motion.p>
@@ -33,7 +33,7 @@ export function FeaturedProducts({ products }: FeaturedProductsProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.1 }}
-              className="text-4xl font-bold text-stone-900 dark:text-white"
+              className="text-5xl font-bold text-stone-900 dark:text-white"
             >
               اكتشف تشكيلتنا الفاخرة
             </motion.h2>

@@ -38,7 +38,7 @@ function AnimatedNumber({ value, suffix }: { value: number; suffix: string }) {
   }, [isInView, value]);
 
   return (
-    <span ref={ref} className="text-4xl md:text-5xl font-bold text-gold-400">
+    <span ref={ref} className="text-5xl md:text-5xl font-bold text-gold-400">
       {count}{suffix}
     </span>
   );
@@ -66,8 +66,8 @@ export function StatsSection() {
               className="text-center"
             >
               <AnimatedNumber value={stat.number} suffix={stat.suffix} />
-              <p className="text-white font-semibold mt-2 text-lg">{stat.label}</p>
-              <p className="text-stone-400 text-sm">{stat.description}</p>
+              <p className="text-white font-semibold mt-2 text-xl">{stat.label}</p>
+              <p className="text-stone-400 text-lg">{stat.description}</p>
             </motion.div>
           ))}
         </div>

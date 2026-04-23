@@ -23,7 +23,7 @@ export default async function AdminRequestsPage() {
   return (
     <div>
       <div className="mb-8">
-        <h1 className="text-2xl font-bold text-stone-900 dark:text-white">الطلبات</h1>
+        <h1 className="text-3xl font-bold text-stone-900 dark:text-white">الطلبات</h1>
         <p className="text-stone-500 mt-1">إدارة جميع طلبات العملاء</p>
       </div>
 
@@ -55,16 +55,16 @@ export default async function AdminRequestsPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                    <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                       <Phone className="w-4 h-4 shrink-0" />
                       <span dir="ltr">{req.customerPhone}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                    <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                       <MapPin className="w-4 h-4 shrink-0" />
                       <span>{req.city} - {req.address}</span>
                     </div>
                     {req.preferredDate && (
-                      <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                      <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                         <Calendar className="w-4 h-4 shrink-0" />
                         <span>{formatDate(req.preferredDate)}</span>
                       </div>
@@ -72,7 +72,7 @@ export default async function AdminRequestsPage() {
                   </div>
 
                   {req.details && (
-                    <p className="mt-3 text-sm text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
+                    <p className="mt-3 text-lg text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
                       {req.details}
                     </p>
                   )}
@@ -106,11 +106,11 @@ export default async function AdminRequestsPage() {
                   </div>
 
                   <div className="space-y-2">
-                    <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                    <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                       <Phone className="w-4 h-4 shrink-0" />
                       <span dir="ltr">{req.customerPhone}</span>
                     </div>
-                    <div className="flex items-center gap-2 text-sm text-stone-600 dark:text-stone-400">
+                    <div className="flex items-center gap-2 text-lg text-stone-600 dark:text-stone-400">
                       <MapPin className="w-4 h-4 shrink-0" />
                       <span>{req.address}</span>
                     </div>
@@ -118,7 +118,7 @@ export default async function AdminRequestsPage() {
                   </div>
 
                   {req.description && (
-                    <p className="mt-3 text-sm text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
+                    <p className="mt-3 text-lg text-stone-500 bg-stone-900 rounded-lg p-3 leading-relaxed">
                       {req.description}
                     </p>
                   )}
@@ -177,7 +177,7 @@ function UpdateStatusForm({
         <select
           name="status"
           defaultValue={currentStatus}
-          className="flex-1 text-sm rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-900 px-3 py-1.5 text-stone-900 dark:text-white"
+          className="flex-1 text-lg rounded-lg border border-stone-200 dark:border-stone-700 bg-stone-900 px-3 py-1.5 text-stone-900 dark:text-white"
         >
           {statuses.map((s) => (
             <option key={s} value={s}>
@@ -187,7 +187,7 @@ function UpdateStatusForm({
         </select>
         <button
           type="submit"
-          className="px-3 py-1.5 bg-gold-600 text-white text-sm rounded-lg hover:bg-gold-700 transition-colors"
+          className="px-3 py-1.5 bg-gold-600 text-white text-lg rounded-lg hover:bg-gold-700 transition-colors"
         >
           تحديث
         </button>

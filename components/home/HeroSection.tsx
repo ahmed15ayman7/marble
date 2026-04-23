@@ -153,7 +153,7 @@ function HeroMarbleSlider() {
             <p className="text-xs font-medium uppercase tracking-[0.2em] text-gold-300/90">
               عرض مميز
             </p>
-            <p className="text-xl font-bold text-white drop-shadow-lg sm:text-2xl">
+            <p className="text-2xl font-bold text-white drop-shadow-lg sm:text-3xl">
               {heroSlides[index].title}
             </p>
           </motion.div>
@@ -234,7 +234,7 @@ function HeroMarbleSlider() {
             whileHover={{ y: -4, transition: { type: "spring", stiffness: 400 } }}
             className="rounded-xl border border-white/10 bg-white/[0.06] px-3 py-3 text-center backdrop-blur-sm"
           >
-            <span className="block text-lg font-bold text-gold-400 sm:text-xl">{s.n}</span>
+            <span className="block text-xl font-bold text-gold-400 sm:text-2xl">{s.n}</span>
             <span className="text-xs text-stone-400">{s.l}</span>
           </motion.li>
         ))}
@@ -272,7 +272,7 @@ export function HeroSection() {
               className="inline-flex items-center gap-2 bg-gold-700/10 border border-gold-700/20 rounded-full px-4 py-2 mb-6"
             >
               <span className="w-2 h-2 bg-gold-400 rounded-full animate-pulse" />
-              <span className="text-gold-400 text-sm font-medium">الرائد في صناعة الرخام والجرانيت</span>
+              <span className="text-gold-400 text-lg font-medium">الرائد في صناعة الرخام والجرانيت</span>
             </motion.div>
 
             <motion.h1
@@ -292,7 +292,7 @@ export function HeroSection() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-stone-300 text-lg md:text-xl leading-relaxed mb-10 max-w-xl"
+              className="text-stone-300 text-xl md:text-2xl leading-relaxed mb-10 max-w-xl"
             >
               نقدم أجود أنواع الرخام والجرانيت المصري والمستورد للتوريد والتركيب والتصدير الدولي.
               خبرة أكثر من 20 عاماً في خدمة المشاريع السكنية والتجارية.
@@ -327,7 +327,7 @@ export function HeroSection() {
               {features.map((feature, i) => (
                 <div key={i} className="flex items-center gap-2">
                   <feature.icon className="w-4 h-4 text-gold-400" />
-                  <span className="text-stone-300 text-sm">{feature.text}</span>
+                  <span className="text-stone-300 text-lg">{feature.text}</span>
                 </div>
               ))}
             </motion.div>

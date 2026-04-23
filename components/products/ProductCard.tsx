@@ -36,7 +36,7 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
         ) : (
           <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-stone-100 to-stone-200 dark:from-stone-700 dark:to-stone-600">
             <div className="text-stone-400 dark:text-stone-500 text-center">
-              <div className="text-4xl mb-2">🪨</div>
+              <div className="text-5xl mb-2">🪨</div>
               <p className="text-xs">{product.nameAr}</p>
             </div>
           </div>
@@ -94,11 +94,11 @@ export function ProductCard({ product, index = 0 }: ProductCardProps) {
 
         <div className="flex items-center justify-between mt-4">
           {product.price ? (
-            <p className="font-bold text-gold-600 dark:text-gold-400 text-sm">
+            <p className="font-bold text-gold-600 dark:text-gold-400 text-lg">
               {formatPrice(product.price, product.priceUnit ?? "م²")}
             </p>
           ) : (
-            <p className="text-sm text-stone-400 dark:text-stone-500">اتصل للسعر</p>
+            <p className="text-lg text-stone-400 dark:text-stone-500">اتصل للسعر</p>
           )}
           <Button asChild variant="ghost" size="sm" className="text-gold-600 hover:text-gold-700 hover:bg-gold-50 dark:hover:bg-gold-900/20 text-xs">
             <Link href={`/products/${product.slug}`}>

@@ -54,7 +54,7 @@ export function ServicesSection() {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-gold-600 font-medium text-sm uppercase tracking-widest mb-3"
+            className="text-gold-600 font-medium text-lg uppercase tracking-widest mb-3"
           >
             خدماتنا
           </motion.p>
@@ -63,7 +63,7 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.1 }}
-            className="text-4xl font-bold text-stone-900 dark:text-white mb-4"
+            className="text-5xl font-bold text-stone-900 dark:text-white mb-4"
           >
             نقدم خدمات متكاملة
           </motion.h2>
@@ -72,7 +72,7 @@ export function ServicesSection() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.2 }}
-            className="text-stone-500 dark:text-stone-400 text-lg max-w-2xl mx-auto"
+            className="text-stone-500 dark:text-stone-400 text-xl max-w-2xl mx-auto"
           >
             من التوريد والتركيب إلى التصدير الدولي - نوفر حلولاً متكاملة لجميع احتياجاتك من الرخام والجرانيت
           </motion.p>
@@ -92,15 +92,15 @@ export function ServicesSection() {
               <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 <service.icon className="w-7 h-7 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-stone-900 dark:text-white mb-3">
+              <h3 className="text-2xl font-bold text-stone-900 dark:text-white mb-3">
                 {service.title}
               </h3>
-              <p className="text-stone-500 dark:text-stone-400 text-sm leading-relaxed mb-5">
+              <p className="text-stone-500 dark:text-stone-400 text-lg leading-relaxed mb-5">
                 {service.description}
               </p>
               <Link
                 href={service.href}
-                className="inline-flex items-center gap-2 text-gold-600 font-medium text-sm hover:text-gold-700 transition-colors"
+                className="inline-flex items-center gap-2 text-gold-600 font-medium text-lg hover:text-gold-700 transition-colors"
               >
                 اعرف أكثر
                 <ArrowLeft className="w-4 h-4" />
