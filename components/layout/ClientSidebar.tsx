@@ -66,7 +66,7 @@ export function ClientSidebar() {
               <p className="font-bold text-stone-900 dark:text-white text-lg leading-none truncate">
                 حسابي
               </p>
-              <p className="text-gold-600 text-xs">الوادي للرخام</p>
+              <p className="text-gold-600 text-xs">سمارت ماربل</p>
             </div>
           )}
           <button

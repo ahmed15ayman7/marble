@@ -83,7 +83,7 @@ export default function LoginPage() {
               تسجيل الدخول
             </h1>
             <p className="text-stone-500 text-lg mt-1">
-              لوحة تحكم الوادي للرخام والجرانيت
+              لوحة تحكم سمارت ماربل والجرانيت
             </p>
           </div>
 

@@ -9,7 +9,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { formatDate, getStatusLabel, getStatusColor } from "@/lib/utils";
 
-export const metadata: Metadata = { title: "لوحتي | الوادي للرخام" };
+export const metadata: Metadata = { title: "لوحتي | سمارت ماربل" };
 
 async function getUserStats(userId: string) {
   const [measurements, services, messages] = await Promise.all([

@@ -183,7 +183,7 @@ export default function RegisterPage() {
               {step === "form" ? "إنشاء حساب جديد" : "التحقق من البريد"}
             </h1>
             <p className="text-stone-500 text-lg mt-1">
-              {step === "form" ? "انضم إلى الوادي للرخام والجرانيت" : "اختياري - يمكنك تخطيه"}
+              {step === "form" ? "انضم إلى سمارت ماربل والجرانيت" : "اختياري - يمكنك تخطيه"}
             </p>
           </div>
 

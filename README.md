@@ -1,4 +1,4 @@
-# 🪨 الوادي للرخام والجرانيت - Marble & Granite Exhibition Platform
+# 🪨 سمارت ماربل والجرانيت - Marble & Granite Exhibition Platform
 
 منصة متكاملة لعرض وبيع الرخام والجرانيت، مبنية بـ **Next.js 14 + TypeScript + Prisma + PostgreSQL + NextAuth**.
 

@@ -61,7 +61,7 @@ export function AdminSidebar() {
           {!collapsed && (
             <div className="flex-1 min-w-0">
               <p className="font-bold text-stone-900 dark:text-white text-lg leading-none truncate">
-                الوادي للرخام
+                سمارت ماربل
               </p>
               <p className="text-gold-600 text-xs">لوحة التحكم</p>
             </div>
